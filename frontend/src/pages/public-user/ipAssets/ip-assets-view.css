@@ -1,0 +1,131 @@
+body {
+    background: var(--grey);
+    position: relative;
+    overflow-x: hidden;
+}
+
+#main-content {
+    position: relative;
+    padding: 0;
+    padding: 20px 10px;
+    background: var(--grey);
+}
+
+#main-content .table-container {
+    width: 80%;
+    margin: auto;
+    background: var(--light);
+    border-radius: 5px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#main-content .page-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#main-content .page-title h3 {
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: var(--text-color);
+    position: relative;
+    text-transform: uppercase;
+}
+
+#main-content .page-title h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    width: 60%;
+    height: 3px;
+    bottom: -4px;
+    border-radius: 5px;
+}
+
+
+.article-container{
+    width: 1000px;
+    height: auto; 
+    background-color: #ffffff;
+    margin: 0 auto;
+    /* margin-bottom: 5%; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    border-radius: 10px;  
+}
+.article-title{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.article-title h1 {
+    text-align: center;
+    font-weight: 580;
+}
+
+.article-date-published {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.article-date-published h5{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+}
+.article-container label{
+    font-weight: 500;
+    
+}
+.article-authors{
+    font-size: .8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    text-align: center;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    margin: auto;
+}
+.download-cert-btn{
+    background-color: #cf102d;
+    color: white;
+    border: none;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 2%;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center;
+}
+.download-cert-btn:hover{
+    background-color: #ef3450;
+}
+.abstract-cont{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.content-title {
+    display: flex;
+    justify-content: center;
+}
+.content-title .abstract {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
