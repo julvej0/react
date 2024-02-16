@@ -13,17 +13,26 @@ import {
 } from "./functionalities";
 
 function Home() {
+  const [isError, setIsError] = useState(false);
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const {
     data: publicationsData,
-    error,
-    isValidating,
+    error: publicationsError,
+    isValidating: publicationsIsValidating,
   } = useSWR("http://localhost:5000/table_publications", fetcher);
 
-  if (error) return <div className="failed">Failed to load</div>;
-  if (isValidating) return <div className="Loading">Loading...</div>;
+  const {
+    data: ipassetsData,
+    error: ipassetsError,
+    isValidating: ipassetsIsValidating,
+  } = useSWR("http://localhost:5000/table_ipassets", fetcher);
+
+  if (publicationsError || ipassetsError) setError(true);
+  if (publicationsIsValidating || ipassetsIsValidating) return <div className="Loading">Loading...</div>;
 
   const publications = publicationsData.table_publications;
+  const ipassets = ipassetsData.table_ipassets;
+  console.log(ipassets)
   
   return (
     <>
@@ -152,12 +161,20 @@ function Home() {
                 <div className="card-content">
                   <h3>Top Contributors</h3>
                   <div className="table">
-                    {"{"}/*{" "}
-                    {/*?php
-                         // Call the `getIpAssetsContributors` function to retrieve the contributors of intellectual property (IP) assets using the database connection object $conn
-                        getIpAssetsContributors($ipassetsurl, $authorurl)
-                        ?*/}{" "}
-                    */{"}"}
+                  <table>
+                      <tr>
+                        <th>Title</th>
+                        <th>Date Published</th>
+                      </tr>
+                      {getRecentPublications(publications).map((papers) => {
+                        return (
+                          <tr>
+                            <td>{papers[0]}</td>
+                            <td>{papers[1]}</td>
+                          </tr>
+                        )
+                      })}
+                    </table>
                   </div>
                 </div>
               </div>

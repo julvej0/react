@@ -2,7 +2,8 @@ import React from "react";
 import "./footer.css"
 import logo from "../../assets/images/batStateUNeu-logo.png"
 import spartan from "../../assets/images/redspartan_logo.png"
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa"
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const Footer = () => {
@@ -18,17 +19,17 @@ const Footer = () => {
               <ul className="socials-list">
                 <li>
                   <a href="https://www.facebook.com/BatStateU.RMS">
-                    <i className="bx bxl-facebook-circle icon" />
+                    <FaFacebook size={20} />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i className="bx bxl-instagram-alt icon" />
+                    <FaInstagram size={21} />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i className="bx bxl-twitter icon" />
+                    <FaXTwitter size={20} />
                   </a>
                 </li>
               </ul>

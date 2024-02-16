@@ -50,6 +50,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 5px;
+    
 }
 
 #footer-container .footer .footer-second-layer .mid-content .socials .socials-list li {
@@ -86,6 +87,7 @@
     color: #fff;
 }
 
+/* spartan */
 #footer-container .footer .logo img {
     width: 150px;
     height: 150px;
@@ -93,9 +95,10 @@
     border-radius: 50%;
     object-fit: contain;     
     position: absolute;
-    top: 10px; /* Adjust this value according to your preference */
-    left: 84%; /* Adjust this value according to your preference */
-    transform: translateX(50%); /* This will center the image horizontally */
+    top: 10px; 
+    left: 84%; 
+    position: absolute;
+    transform: translateX(50%); 
 }
 
 #footer-container .bottom {
@@ -166,10 +169,12 @@
     display: flex;
     position: absolute;
     left: 4%;
-    top: 34%;
+    top: 35%;
     color: #fff;
 }
-
+.email a{
+    margin-top: 2px;
+}
 .envelope-icon{
     margin: 5px;
 }
