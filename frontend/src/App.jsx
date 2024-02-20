@@ -19,8 +19,8 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar /> */}
-        <AdminNavbar />
+        <Navbar />
+        {/* <AdminNavbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/publications" element={<Publications />} />

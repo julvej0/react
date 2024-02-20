@@ -12,7 +12,7 @@ const Card = ({header, title1, title2, data}) => {
                 <th>{title1}</th>
                 <th>{title2}</th>
               </tr>
-              {data.map((item) => {
+              {data && data.map((item) => {
                 return (
                   <tr key={item}>
                     <td>{item[0]}</td>
