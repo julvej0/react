@@ -12,9 +12,11 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-second-layer">
           <div className="mid-content">
+
             <div className="bsu-logo">
               <img src={logo} alt="BSU logo" />
             </div>
+            
             <div className="socials">
               <ul className="socials-list">
                 <li>
@@ -39,7 +41,7 @@ const Footer = () => {
 
               <h3 className="contact">Contact Us</h3>
               
-              <p className="number"><FaPhoneAlt className="phone-icon" /> (123) 456-7890</p>
+              <p className="number"><FaPhoneAlt className="phone-icon" size={14} /> (123) 456-7890</p>
 
               <div className="email">
                 <FaEnvelope className="envelope-icon" /> 
@@ -58,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="logo">
-          <a href="”https://www.google.com“">
+          <a href="">
             <img src={spartan} alt="" />
           </a>
         </div>

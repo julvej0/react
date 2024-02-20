@@ -17,15 +17,37 @@
     padding: 10px 4px 0 0;
     position: relative;
 }
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer {
+        width: 100%;
+        height: 100%;
+        background: var(--accent);
+        border-top-right-radius: 83%;
+        padding: 10px 4px 0 0;
+        position: relative;
+    } 
+}
 
 #footer-container .footer .footer-second-layer {
     background: var(--primary);
     width: 100%;
     height: 100%;
-    border-top-right-radius: 95%;
+    border-top-right-radius: 97%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+}
+
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer {
+        background: var(--primary);
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 83%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
 }
 
 #footer-container .footer .footer-second-layer .mid-content {
@@ -36,13 +58,48 @@
     gap: 15px;
 }
 
+@media screen and (min-width: 790px) and (max-width: 1023px){ /* tablet resolution */
+    #footer-container .footer .footer-second-layer .mid-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+    }
+}
+
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer .mid-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+}
+
 #footer-container .footer .footer-second-layer .mid-content .bsu-logo img {
     width: 150px;
+}
+@media screen and (min-width: 790px) and (max-width: 1023px){ /* tablet resolution */
+    #footer-container .footer .footer-second-layer .mid-content .bsu-logo img {
+        width: 90px;
+    }
+}
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer .mid-content .bsu-logo img {
+        width: 90px;
+    }
 }
 
 #footer-container .footer .footer-second-layer .mid-content .socials {
     width: 150px;
     padding: 10px;
+}
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer .mid-content .socials {
+        width: 100px;
+    }   
 }
 
 #footer-container .footer .footer-second-layer .mid-content .socials .socials-list {
@@ -75,10 +132,29 @@
     text-align: left;
 }
 
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer .mid-content .contact-us,
+    #footer-container .footer .footer-second-layer .mid-content .address {
+        text-align: left;
+        margin: 0;
+        gap: 0;
+        padding: 0;
+    }
+}
+
 #footer-container .footer .footer-second-layer .mid-content .contact-us h3,
 #footer-container .footer .footer-second-layer .mid-content .address h3 {
     margin-bottom: 10px;
     color: #fff;
+}
+
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer .mid-content .contact-us h3,
+    #footer-container .footer .footer-second-layer .mid-content .address h3 {
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: medium;
+    }
 }
 
 #footer-container .footer .footer-second-layer .mid-content .contact-us p,
@@ -87,19 +163,39 @@
     color: #fff;
 }
 
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    #footer-container .footer .footer-second-layer .mid-content .contact-us p,
+    #footer-container .footer .footer-second-layer .mid-content .address p {
+    font-size: 14px;
+    color: #fff;
+    font-size: x-small;
+}
+}
+
 /* spartan */
 #footer-container .footer .logo img {
-    width: 150px;
+    width:150px;
     height: 150px;
     background: var(--light);
     border-radius: 50%;
     object-fit: contain;     
     position: absolute;
     top: 10px; 
-    left: 84%; 
-    position: absolute;
-    transform: translateX(50%); 
-}
+    right: 0;
+    margin-right: 20px;
+} 
+
+@media screen and (min-width: 790px) and (max-width: 1023px){ /* tablet resolution */
+    #footer-container .footer .logo img {
+        width: 100px;
+        height: 100px;
+        background: var(--light);
+        border-radius: black;
+        object-fit: contain;     
+        position: absolute;
+        top: 10px; 
+    }
+} 
 
 #footer-container .bottom {
     height: 30px;
@@ -125,6 +221,33 @@
     top: 15%;
 }
 
+.number {
+    display: flex;
+    position: absolute;
+    left: 4%;
+    top: 25%;
+    color: #fff;
+}
+
+.email {
+    display: flex;
+    position: absolute;
+    left: 4%;
+    top: 33%;
+    color: #fff;
+}
+
+.email a{
+    margin-top: 2px;
+}
+
+.envelope-icon{
+    margin: 5px;
+}
+
+.complete-address {
+    color: #fff;
+}
 
 .address {
     display: flex;
@@ -144,37 +267,91 @@
     display: flex;
     position: absolute;
     left: 4%;
-    top: 64%;
-}
-
-.complete-address {
-    color: #fff;
-}
-
-
-.number {
-    display: flex;
-    position: absolute;
-    left: 4%;
-    top: 25%;
-    color: #fff;
+    top: 62%;
 }
 
 .phone-icon{
     margin: 5px;
 }
 
+
+@media screen and (max-width: 789px){ /* phone resolution */ 
+    .street {
+        display: flex;
+        position: absolute;
+        left: 6%;
+        top: 50%;
+        font-size: x-small;
+    }
     
-.email {
-    display: flex;
-    position: absolute;
-    left: 4%;
-    top: 35%;
-    color: #fff;
+    .city {
+        display: flex;
+        position: absolute;
+        left: 6%;
+        top: 54%;
+        font-size: x-small;
+    }
+    
+    .address {
+        display: flex;
+        position: absolute;
+        left: 3%;
+        top: 43%;
+        font-size: medium;
+    }  
+
+    .email {
+        display: flex;
+        position: absolute;
+        left: 2%;
+        top: 31%;
+        color: #fff;
+        align-items: center;
+    }
+
+    .number {
+        display: flex;
+        position: absolute;
+        left: 2%;
+        top: 25%;
+        color: #fff;
+        align-items: center;
+    }
+
+    #footer-container .footer .logo img {
+        width: 80px;
+        height: 80px;
+        background: var(--light);
+        border-radius: 50%;
+        object-fit: contain;     
+        position: absolute;
+        top: 10px;
+        margin-right: 2px;
+        
+    }
+
+    #footer-container .bottom {
+        height: 20px;
+        width: 100%;
+        background: #555;
+        border-right: 4px solid var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #footer-container .bottom p {
+        color: var(--grey);
+        font-size: 9px;
+        font-weight: 350;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
 }
-.email a{
-    margin-top: 2px;
-}
-.envelope-icon{
-    margin: 5px;
-}
+
+
+
+    
+
+
+

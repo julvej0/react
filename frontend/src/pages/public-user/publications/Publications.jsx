@@ -1,6 +1,7 @@
 import React from "react";
+import './publications.css'
 
-const Articles = () => {
+const Publications = () => {
   return (
     <section id="main-content">
       <div className="page-title">
@@ -204,4 +205,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Publications;

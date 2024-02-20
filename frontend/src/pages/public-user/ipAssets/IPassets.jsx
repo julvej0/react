@@ -1,4 +1,5 @@
 import React from "react";
+import "./ipAssets.css"
 
 const IPassets = () => {
   return (

@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import vipcorals from "../../../assets/images/vipcorals.webp";
 import "../../../css/boxiconsV2.1.4.min.css";
-import { FaArrowRight, FaSearch } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import useSWR from "swr";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
-  getMostViewedPapers,
-  getPublicationsContributors,
-  getRecentPublications,
+  getMostViewedPapers, getRecentDatePublished, getRecentDateRegistered, getTopCampus, getTopContributions,
 } from "./functionalities";
+import { API } from "../../../API";
+import Card from "./Card";
+import Footer from "../../../components/footer/Footer";
 
 function Home() {
   const [isError, setIsError] = useState(false);
@@ -19,21 +20,23 @@ function Home() {
     data: publicationsData,
     error: publicationsError,
     isValidating: publicationsIsValidating,
-  } = useSWR("http://localhost:5000/table_publications", fetcher);
+  } = useSWR(`${API}/table_publications`, fetcher);
 
   const {
     data: ipassetsData,
     error: ipassetsError,
     isValidating: ipassetsIsValidating,
-  } = useSWR("http://localhost:5000/table_ipassets", fetcher);
+  } = useSWR(`${API}/table_ipassets`, fetcher);
 
-  if (publicationsError || ipassetsError) setError(true);
+  if (publicationsError || ipassetsError) return <div className="Loading">Error...</div>;
+  // if (publicationsError) return <div className="Loading">Error...</div>;
+  // if (publicationsIsValidating)
+  //   return <div className="Loading">Loading...</div>;
   if (publicationsIsValidating || ipassetsIsValidating) return <div className="Loading">Loading...</div>;
 
   const publications = publicationsData.table_publications;
   const ipassets = ipassetsData.table_ipassets;
-  console.log(ipassets)
-  
+
   return (
     <>
       {/* <div id="loading-screen">
@@ -74,77 +77,13 @@ function Home() {
         </section>
         <div className="main-container">
           <div className="content">
-            <div className="text-white">
+            <div className="title">
               <h3>Publications</h3>
             </div>
             <div className="card-container">
-              <div className="card" id="card">
-                <div className="card-content">
-                  <h3>Top Contributors</h3>
-                  <div className="table">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <th>Authors</th>
-                          <th>Number of Publications</th>
-                        </tr>
-                        {getPublicationsContributors(publications).map(
-                          (authors) => {
-                            return (
-                              <tr key={authors}>
-                                <td>{authors[0]}</td>
-                                <td>{authors[1]}</td>
-                              </tr>
-                            );
-                          }
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="card " id="card">
-                <div className="card-content">
-                  <h3>Most Cited </h3>
-                  <div className="table">
-                    <table>
-                      <tr>
-                        <th>Title of Paper</th>
-                        <th>Number of Citations</th>
-                      </tr>
-                      {getMostViewedPapers(publications).map((papers) => {
-                        return (
-                          <tr>
-                            <td>{papers[0]}</td>
-                            <td>{papers[1]}</td>
-                          </tr>
-                        );
-                      })}
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="card " id="card">
-                <div className="card-content">
-                  <h3>Recently Added </h3>
-                  <div className="table">
-                    <table>
-                      <tr>
-                        <th>Title</th>
-                        <th>Date Published</th>
-                      </tr>
-                      {getRecentPublications(publications).map((papers) => {
-                        return (
-                          <tr>
-                            <td>{papers[0]}</td>
-                            <td>{papers[1]}</td>
-                          </tr>
-                        )
-                      })}
-                    </table>
-                  </div>
-                </div>
-              </div>
+              <Card header="Top Contributor" title1="Authors" title2="Number of Publications" data={getTopContributions(publications)} />
+              <Card header="Most Cited" title1="Title of Paper" title2="Number of Citations" data={getMostViewedPapers(publications)} />
+              <Card header="Recently Added" title1="Title" title2="Date Published" data={getRecentDatePublished(publications)} />
             </div>
             <div className="see-more-btn">
               <Link to="/publications">
@@ -157,53 +96,9 @@ function Home() {
               <h3>IP ASSETS</h3>
             </div>
             <div className="card-container">
-              <div className="card">
-                <div className="card-content">
-                  <h3>Top Contributors</h3>
-                  <div className="table">
-                  <table>
-                      <tr>
-                        <th>Title</th>
-                        <th>Date Published</th>
-                      </tr>
-                      {getRecentPublications(publications).map((papers) => {
-                        return (
-                          <tr>
-                            <td>{papers[0]}</td>
-                            <td>{papers[1]}</td>
-                          </tr>
-                        )
-                      })}
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-content">
-                  <h3>Top Campus with IP Assets</h3>
-                  <div className="table">
-                    {"{"}/*{" "}
-                    {/*?php
-                        //Call `getTopCampus` function to retrieve the top campus with most ip assets
-                        getTopCampus($ipassetsurl)
-                        ?*/}{" "}
-                    */{"}"}
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-content">
-                  <h3>Recently Added</h3>
-                  <div className="table">
-                    {"{"}/*{" "}
-                    {/*?php
-                        // Call the `getRecentIpAssets` function to retrieve the most recent intellectual property (IP) assets using the database connection object $conn and a limit of 5
-                        getRecentIpAssets($ipassetsurl)
-                        ?*/}{" "}
-                    */{"}"}
-                  </div>
-                </div>
-              </div>
+              <Card header="Top Contributor" title1="Authors" title2="Number of IP Assets" data={getTopContributions(ipassets)} />
+              <Card header="Top Campus with IP Assets" title1="Campus" title2="Number of IP Assets" data={getTopCampus(ipassets)} />
+              <Card header="Recently Added" title1="Title" title2="Date Registered" data={getRecentDateRegistered(ipassets)} />
             </div>
             <div className="see-more-btn">
               <Link to="/ip-assets">
@@ -243,6 +138,8 @@ function Home() {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </>
   );
 }
