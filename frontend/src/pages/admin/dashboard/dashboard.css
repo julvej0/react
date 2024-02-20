@@ -6,7 +6,7 @@ main .content-data {
 }
 
 main .sub-page {
-    display: none;
+    /* display: none; */
     transition: all 0.5s ease;
 }
 

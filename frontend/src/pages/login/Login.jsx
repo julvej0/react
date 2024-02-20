@@ -1,5 +1,5 @@
 import React from "react";
-import "./login.css"
+// import "./login.css"
 import bsulogo from "../../assets/images/batStateUNeu-logo.png"
 import background from "../../assets/images/background_img.jpg"
 
