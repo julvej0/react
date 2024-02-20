@@ -1,7 +1,7 @@
 import React from "react";
 import "./adminnavbar.css"
 
-const Navbar = () => {
+const AdminNavbar = () => {
   return (
     <section id="sidebar">
       <div className="logo">
@@ -116,4 +116,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;
+export default AdminNavbar;

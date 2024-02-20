@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+.skewbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 1200px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.contentto{
+    /* width: calc(50% - 50px); */
+    /* height: 100%; */
+    background-color: rgb(255, 255, 255);
+    padding: 2%, 5%;
+    line-height: 1.5em;
+    font-size: 18px;
+}
+
+.imagebox {
+    /* width: calc(50% + 50px); */
+    /* height: 100%; */
+    background-color: cyan;
+    border-left: 100px solid blue;
+    border-bottom: 400px solid transparent;
+}
+

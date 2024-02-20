@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
 .container {
-    width: 100vw;
-    height: 150px;
+    width: 100%;
     position: relative;
     overflow: hidden;
     z-index: 1; 
@@ -11,29 +10,32 @@
 .navbar-container {
     display: flex;
     justify-content: space-between;
-    width: 1920px;
-    gap: 10px;
+    width: 100%;
     height: 150px;
+    /* gap: 10px; */
     padding: 5px 0;
     background: transparent;
     position: relative;
+    overflow: hidden;
     top: 0;
-    left: -220px;
     z-index: 2; /* Set a higher z-index value for the navbar-container */
 }
 
-
 .navbar-container .left {
-    position: relative;
-    z-index: 0;
-    width: 42%;
-    transform: skewX(-50deg);
-    transform-origin: right;
-    left: 0;
-    padding: 3px 5px;
-    background: var(--primary);
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 150px;
+  /* transform: skewX(-50deg); */
+  transform-origin: right;
+  left: calc(-50vw + 40%); /* Center horizontally */
+  padding: 3px 5px;
+  background: var(--primary);
 }
 
+@media screen and (min-width: 790px) and (max-width: 1023px){ /* tablet resolution */
+  
+}
 .navbar-container .left .left-md-container {
     position: relative;
     z-index: 1;
@@ -54,10 +56,10 @@
 .navbar-container .left-sm-container .left-content {
     z-index: 3;
     height: 100%;
-    transform: skewX(50deg);
+    /* transform: skewX(50deg); */
     position: absolute;
     width: 600px;
-    left: 25%;
+    left: 7%;
     transform: translateX(-50%, -50%);
     display: flex;
     align-items: center;
@@ -98,11 +100,14 @@
 
 .navbar-container .right {
     background: var(--bg-grey);
-    width: 58%;
+    width: 55%;
+    position: absolute;
+    height: 150px;
     transform: skewX(-50deg);
     transform-origin: left;
-    right: 0;
     padding: 3px 5px;
+    overflow: hidden;
+    right: -100px;  
 }
 
 .navbar-container .right .right-md-container {
@@ -130,7 +135,7 @@
     transform: skewX(50deg);
     position: absolute;
     width: 78%;
-    right: 17%;
+    right: 10%;
     transform: translateX(-50%, -50%);
     display: flex;
     align-items: center;
@@ -217,9 +222,13 @@
 }
 
 
-@media screen and (min-width: 1920px) {
-  .navbar-container {
-    width: 2300px;
+/* @media screen and (min-width: 1920px) {
+  .navbar-container .right {
+    width: 70%;
+  }
+
+  .navbar-container .left {
+    width: 40%;
   }
 }
 
@@ -232,8 +241,8 @@
 @media screen and (min-width: 24in) {
     .navbar-container {
         width: 2600px;
-    }
-}
+    }     
+} */
 
 /* dropdown settings */
 .dropdown-container {
@@ -287,7 +296,7 @@
 
   }
   
-  @keyframes fadeSlideDown {
+  /* @keyframes fadeSlideDown {
     0% {
       opacity: 0;
       transform: translateY(-10px);
@@ -297,7 +306,7 @@
       transform: translateY(0);
     }
   }
-  
+   */
   
   .dropdown a {
     transition: opacity 0.3s ease;
@@ -332,7 +341,7 @@
 }
 
 
-@keyframes spin {
+/* @keyframes spin {
   0% {
       transform: rotate(0deg);
   }
@@ -340,6 +349,6 @@
       transform: rotate(360deg);
   }
 }
-  
+   */
 
   

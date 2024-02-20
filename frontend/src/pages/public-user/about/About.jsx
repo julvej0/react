@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css"
+import image from "../../../assets/images/rms-abt.jpg"
 
 const About = () => {
   return (
@@ -9,10 +10,10 @@ const About = () => {
       </div>
       <div className="about-content">
         <div className="left-content animate__animated animate__fadeIn">
-          <img src="../../../assets/images/rms-abt.jpg" alt="" srcSet="" />
+          <img src={image} alt="" srcSet="" />
           <div className="team-desc">
             <div className="content-title animate__animated animate__zoomIn">
-              <h4>The Team</h4>
+              <h4 className="the-team">The Team</h4>
             </div>
             <div className="team">
               <div className="left">
@@ -39,9 +40,9 @@ const About = () => {
             <div className="third-col">
               <div className="content">
                 <div className="content-title animate__animated animate__zoomIn">
-                  <h4>Mission</h4>
+                  <h4 className="mission">Mission</h4>
                 </div>
-                <p>
+                <p className="text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
                   The point of using Lorem Ipsum is that it has a more-or-less
@@ -57,9 +58,9 @@ const About = () => {
               </div>
               <div className="content">
                 <div className="content-title animate__animated animate__zoomIn">
-                  <h4>Vision</h4>
+                  <h4 className="vision">Vision</h4>
                 </div>
-                <p>
+                <p className="text">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
                   The point of using Lorem Ipsum is that it has a more-or-less

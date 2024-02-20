@@ -1,11 +1,15 @@
 import React from "react";
+import "./login.css"
+import bsulogo from "../../assets/images/batStateUNeu-logo.png"
+import background from "../../assets/images/background_img.jpg"
+
 
 const Login = () => {
   return (
     <>
       <div id="whole_page">
         <img
-          src="./../../assets/images/background_img.jpg"
+          src={background}
           style={{
             opacity: "0.7",
             width: "100%",
@@ -17,7 +21,7 @@ const Login = () => {
   <img src="../../../assets/images/redspartan_logo.png" style="width: 150px; height: 160px; position: fixed; bottom: 0; right: 0; margin-bottom: 50px; margin-right: 25px; z-index: 2; border-radius: 50% / 20%;">
     </div> */}
         <img
-          src="./../../assets/images/batStateUNeu-logo.png"
+          src={bsulogo}
           style={{
             width: 100,
             height: 100,

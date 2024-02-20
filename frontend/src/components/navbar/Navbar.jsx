@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css"
+import {Link} from "react-router-dom"
 import batstateulogo from "../../assets/images/batStateUNeu-logo.png";
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
                 <div className="logo">
                   <img
                     src={batstateulogo}
-                    alt=""
+                    alt="BSU logo"
                   />
                 </div>
                 <div className="header-title">
@@ -73,44 +74,44 @@ const Navbar = () => {
                   {/* <li><a href="/new-rms-webdev/views/admin/about/about.php" id='abt-link' onClick="showLoadingScreen()">ABOUT</a></li> */}
                   {/*?php else: ?*/}
                   <li>
-                    <a
-                      href="../../../views/public-user/home/home.php"
+                    <Link
+                      to="/"
                       id="home-link"
                     //   onClick="showLoadingScreen()"
                     >
                       HOME
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="../../../views/public-user/ip-assets/ip-assets.php"
+                    <Link
+                      to="/ip-assets"
                       id="ip-assets-link"
                     //   onClick="showLoadingScreen()"
                     >
                       IP ASSETS
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="../../../views/public-user/articles/articles.php"
+                    <Link
+                      to="/publications"
                       id="pb-link"
                     //   onClick="showLoadingScreen()"
                     >
                       PUBLICATIONS
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="../../../views/public-user/about/about.php"
+                    <Link
+                      to="/about"
                       id="abt-link"
                     //   onClick="showLoadingScreen()"
                     >
                       ABOUT
-                    </a>
+                    </Link>
                   </li>
                   {/*?php endif; ?*/}
                   {/*?php else: ?*/}
-                  <li>
+                  {/* <li>
                     <a
                       href="../../../views/public-user/home/home.php"
                       id="home-link"
@@ -145,7 +146,7 @@ const Navbar = () => {
                     >
                       ABOUT
                     </a>
-                  </li>
+                  </li> */}
                   {/*?php endif; ?*/}
                   <a
                     className="signin-btn"
