@@ -48,9 +48,6 @@
 
 
 
-
-
-
 /* left contents */
 .navbar-container .left-sm-container .left-content {
   height: 100%;
@@ -105,16 +102,11 @@
 
 
 .navbar-container .right .right-content {
-  height: 15%;
-  width: 40%;
-  right: 10%;
+  height: 150px;
+  right: 0;
+  margin-right: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  grid-gap: 0%;
-  margin-top: 10px;
-  /* margin-right: -100px; */
-  
   position: absolute;
   z-index: 3;
 }

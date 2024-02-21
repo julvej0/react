@@ -1,6 +1,6 @@
 import React from "react";
-import "./navbar.css"
-import {Link} from "react-router-dom"
+import "./navbar.css";
+import { Link } from "react-router-dom";
 import batstateulogo from "../../assets/images/batStateUNeu-logo.png";
 
 const Navbar = () => {
@@ -15,10 +15,7 @@ const Navbar = () => {
             <div className="left-sm-container">
               <div className="left-content">
                 <div className="logo">
-                  <img
-                    src={batstateulogo}
-                    alt="BSU logo"
-                  />
+                  <img src={batstateulogo} alt="BSU logo" />
                 </div>
                 <div className="header-title">
                   <h4>BatStateU</h4>
@@ -29,51 +26,47 @@ const Navbar = () => {
           </div>
         </div>
         <div className="right">
-              <div className="right-content">
-                <ul className="nav-links">             
-                  <li>
-                    <Link
-                      to="/"
-                      id="home-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      HOME
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/ip-assets"
-                      id="ip-assets-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      IP ASSETS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/publications"
-                      id="pb-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      PUBLICATIONS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/about"
-                      id="abt-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      ABOUT
-                    </Link>
-                  </li>
-                  <a
-                    className="signin-btn"
-                    href=""
-                  >
-                  </a>
-                </ul>
-              </div>
+          <div className="right-content">
+            <ul className="nav-links">
+              <li>
+                <Link
+                  to="/"
+                  id="home-link"
+                  //   onClick="showLoadingScreen()"
+                >
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ip-assets"
+                  id="ip-assets-link"
+                  //   onClick="showLoadingScreen()"
+                >
+                  IP ASSETS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/publications"
+                  id="pb-link"
+                  //   onClick="showLoadingScreen()"
+                >
+                  PUBLICATIONS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  id="abt-link"
+                  //   onClick="showLoadingScreen()"
+                >
+                  ABOUT
+                </Link>
+              </li>
+              <a className="signin-btn" href=""></a>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
