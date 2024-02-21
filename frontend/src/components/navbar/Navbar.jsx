@@ -29,50 +29,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="right">
-          <div className="right-md-container">
-            <div className="right-sm-container">
               <div className="right-content">
-                <ul className="nav-links">
-                  {/*?php if( isset($_SESSION['account_type']) ): ?*/}
-                  {/*?php if ($_SESSION['account_type'] == "Admin"): ?*/}
-                  {/* <li>
-                    <a
-                      href="../../../admin/dashboard/dashboard.php"
-                      id="home-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      DASHBOARD
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="../../../admin/publications/publications.php"
-                      id="pb-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      PUBLICATIONS
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="../../../admin/ip-assets/ip-assets.php"
-                      id="ip-assets-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      IP ASSETS
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="../../../admin/authors/authors.php"
-                      id="author-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      AUTHORS
-                    </a>
-                  </li> */}
-                  {/* <li><a href="/new-rms-webdev/views/admin/about/about.php" id='abt-link' onClick="showLoadingScreen()">ABOUT</a></li> */}
-                  {/*?php else: ?*/}
+                <ul className="nav-links">             
                   <li>
                     <Link
                       to="/"
@@ -109,87 +67,13 @@ const Navbar = () => {
                       ABOUT
                     </Link>
                   </li>
-                  {/*?php endif; ?*/}
-                  {/*?php else: ?*/}
-                  {/* <li>
-                    <a
-                      href="../../../views/public-user/home/home.php"
-                      id="home-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      HOME
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="../../../views/public-user/ip-assets/ip-assets.php"
-                      id="ip-assets-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      IP ASSETS
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="../../../views/public-user/articles/articles.php"
-                      id="pb-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      PUBLICATIONS
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="../../../views/public-user/about/about.php"
-                      id="abt-link"
-                    //   onClick="showLoadingScreen()"
-                    >
-                      ABOUT
-                    </a>
-                  </li> */}
-                  {/*?php endif; ?*/}
                   <a
                     className="signin-btn"
-                    href="<?=isset($_SESSION['user_email']) ? '/new-rms-webdev/views/logout/logout.php?logout=1' :  '/new-rms-webdev/views/login/login.php'?>"
-                    // onClick="<?=isset($_SESSION['user_email']) ? 'return showLogoutAlert()' : ''?>"
+                    href=""
                   >
-                    {/*?=isset($_SESSION['user_email']) ? 'LOGOUT' : 'LOGIN'?*/}
                   </a>
                 </ul>
-                {/*?php
-                      $sessionActive = isset($_SESSION['user_email']);
-                      $accountType = isset($_SESSION['account_type']) ? $_SESSION['account_type'] : '';
-
-                      // Check if the user is an author
-                      $isAuthor = $accountType == 'Author';
-                  ?*/}
-                <div className="dropdown-container <?= $sessionActive ? 'show' : '' ?>">
-                  {/*?php if ($sessionActive): ?*/}
-                  {/* <i className="fas fa-cog" onClick="toggleDropdown()" /> */}
-                  <div className="dropdown" id="dropdown">
-                    <a
-                      style={{ marginRight: 30 }}
-                      href="/new-rms-webdev/views/public-user/profile/user-profile.php"
-                    >
-                      <i className="fas fa-user" /> PROFILE
-                    </a>
-                    {/*?php if ($isAuthor): ?*/}
-                    <a
-                      style={{ marginRight: 30 }}
-                      href="/new-rms-webdev/views/public-user/author-info/author-profile.php"
-                    >
-                      <i className="fas fa-info-circle" /> AUTHOR INFORMATION
-                    </a>
-                    {/*?php endif; ?*/}
-                    <a href="/new-rms-webdev/views/public-user/profile/change-password.php">
-                      <i className="fas fa-lock" /> CHANGE PASSWORD
-                    </a>
-                  </div>
-                  {/*?php endif; ?*/}
-                </div>
               </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
