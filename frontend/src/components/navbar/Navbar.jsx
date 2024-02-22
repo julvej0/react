@@ -1,9 +1,16 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import batstateulogo from "../../assets/images/batStateUNeu-logo.png";
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(true);
+  const [navBg, setNavBg] = useState("black");
+  const [linkColor, setLinkColor] = useState("white");
+
   return (
     <section>
       <div className="loading-overlay" id="loadingOverlay">
@@ -28,44 +35,56 @@ const Navbar = () => {
         <div className="right">
           <div className="right-content">
             <ul className="nav-links">
-              <li>
-                <Link
-                  to="/"
-                  id="home-link"
-                  //   onClick="showLoadingScreen()"
-                >
-                  HOME
-                </Link>
+              <li className="home-link">
+                <Link href="/">HOME</Link>
               </li>
-              <li>
-                <Link
-                  to="/ip-assets"
-                  id="ip-assets-link"
-                  //   onClick="showLoadingScreen()"
-                >
-                  IP ASSETS
-                </Link>
+              <li className="ip-assets-link">
+                <Link href="/ip-assets">IP ASSETS</Link>
               </li>
-              <li>
-                <Link
-                  to="/publications"
-                  id="pb-link"
-                  //   onClick="showLoadingScreen()"
-                >
-                  PUBLICATIONS
-                </Link>
+              <li className="pb-link">
+                <Link href="/abt-link">PUBLICATIONS</Link>
               </li>
-              <li>
-                <Link
-                  to="/about"
-                  id="abt-link"
-                  //   onClick="showLoadingScreen()"
-                >
-                  ABOUT
-                </Link>
+              <li className="abt-link">
+                <Link href="/about">ABOUT US</Link>
               </li>
-              <a className="signin-btn" href=""></a>
+              <a href="/" className="signin-btn">
+                Sign In
+              </a>
             </ul>
+            <div className="device">
+              <div className="container">
+                <button id="burger" className="open-main-nav">
+                  <span className="burger" />
+                  <span className="burger-text">Menu</span>
+                </button>
+                <nav className="main-nav" id="main-nav">
+                  <ul>
+                    <li>
+                      <a href="#">About me</a>
+                    </li>
+                    <li>
+                      <a href="#">Speaker Writer</a>
+                    </li>
+                    <li>
+                      <a href="#">Work</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                  </ul>
+                </nav>
+                <p className="notice">
+                  Design Copyright <strong>Stéphanie Walter</strong>
+                  <br />
+                  <a href="https://stephaniewalter.design/" target="_blank">
+                    StephanieWalter.Design
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
