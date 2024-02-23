@@ -37,16 +37,16 @@ const Navbar = () => {
           <div className="right-content">
             <ul className="nav-links">
               <li className="home-link">
-                <Link href="/">HOME</Link>
+                <Link to="/">HOME</Link>
               </li>
               <li className="ip-assets-link">
-                <Link href="/ip-assets">IP ASSETS</Link>
+                <Link to="/ip-assets">IP ASSETS</Link>
               </li>
               <li className="pb-link">
-                <Link href="/abt-link">PUBLICATIONS</Link>
+                <Link to="/abt-link">PUBLICATIONS</Link>
               </li>
               <li className="abt-link">
-                <Link href="/about">ABOUT US</Link>
+                <Link to="/about">ABOUT US</Link>
               </li>
               <a href="/" className="signin-btn">
                 Sign In
@@ -65,18 +65,18 @@ const Navbar = () => {
       <div className="tab-nav">
         <ul>
           <li className="home-link">
-            <Link href="/">HOME</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li className="ip-assets-link">
-            <Link href="/ip-assets">IP ASSETS</Link>
+            <Link to="/ip-assets">IP ASSETS</Link>
           </li>
           <li className="pb-link">
-            <Link href="/abt-link">PUBLICATIONS</Link>
+            <Link to="/abt-link">PUBLICATIONS</Link>
           </li>
           <li className="abt-link">
-            <Link href="/about">ABOUT US</Link>
+            <Link to="/about">ABOUT US</Link>
           </li>
-          <a href="/" className="signin-btn">
+          <a to="/" className="signin-btn">
             Sign In
           </a>
         </ul>
