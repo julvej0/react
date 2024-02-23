@@ -77,7 +77,6 @@ body {
 @media screen and (min-width: 790px) and (max-width: 1023px){ /* tablet resolution */
     #hero-img .form-group input[type="text"] {
         width: 500px;
-        height: 50px;
         border-radius: 5px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -92,10 +91,26 @@ body {
 @media screen and (max-width: 789px){ /* phone resolution */
     #hero-img .form-group input[type="text"] {
         width: 400px;
-        height: 50px;
         border-radius: 5px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 10px 36px 10px 16px;
+        transition: all 0.3s ease;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    }
+}
+@media screen and (max-width: 430px){ /* smaller phone resolution */
+    #hero-img .form-group input[type="text"] {
+        width: 250px;
+        border-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         outline: none;
         border: none;
         padding: 10px 36px 10px 16px;
@@ -155,14 +170,14 @@ body {
         border-bottom-right-radius: 5;
     }
         
-    #hero-img .form-group input[type="text"] {
+    /* #hero-img .form-group input[type="text"] {
         width: 320px;
         height: 50px;
         border-radius: 8px;
         padding: 12px 36px 10px 16px;
         transition: all 0.3s ease;
         box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
-    }
+    } */
 }
 #hero-img form .form-group .icon {
     position: absolute;
