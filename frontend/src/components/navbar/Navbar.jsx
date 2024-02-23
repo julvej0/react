@@ -62,25 +62,25 @@ const Navbar = () => {
         </div>
 
       </div>
-        <div className="tab-nav">
-          <ul>
-            <li className="home-link">
-              <Link href="/">HOME</Link>
-            </li>
-            <li className="ip-assets-link">
-              <Link href="/ip-assets">IP ASSETS</Link>
-            </li>
-            <li className="pb-link">
-              <Link href="/abt-link">PUBLICATIONS</Link>
-            </li>
-            <li className="abt-link">
-              <Link href="/about">ABOUT US</Link>
-            </li>
-            <a href="/" className="signin-btn">
-              Sign In
-            </a>
-          </ul>
-        </div>
+      <div className="tab-nav">
+        <ul>
+          <li className="home-link">
+            <Link href="/">HOME</Link>
+          </li>
+          <li className="ip-assets-link">
+            <Link href="/ip-assets">IP ASSETS</Link>
+          </li>
+          <li className="pb-link">
+            <Link href="/abt-link">PUBLICATIONS</Link>
+          </li>
+          <li className="abt-link">
+            <Link href="/about">ABOUT US</Link>
+          </li>
+          <a href="/" className="signin-btn">
+            Sign In
+          </a>
+        </ul>
+      </div>
     </section>
   );
 };
