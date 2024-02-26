@@ -1,10 +1,10 @@
 
-body {
+.homepage {
     background: var(--grey);
     position: relative;
 }
 
-#hero-img {
+.homepage #hero-img {
     width: 100%;
     height: 550px;
     background-image: linear-gradient(rgba(0, 0, 0, .315),
@@ -20,7 +20,7 @@ body {
     border: 3px solid var(--bg-grey);
 }
 
-#hero-img .rms-title h1 {
+.homepage #hero-img .rms-title h1 {
     color: var(--light);
     letter-spacing: 1px;
     font-size: 60px;
@@ -30,38 +30,38 @@ body {
 }
 
 @media screen and (max-width: 789px) { /* tablet resolution */
-    #hero-img {
+    .homepage #hero-img {
         height: 400px; 
     }
     
-    #hero-img .rms-title h1 {
+    .homepage #hero-img .rms-title h1 {
         font-size: 40px; 
         width: auto; 
     }
 
-    #form-group {
+    .homepage #form-group {
         height: 400px;
         width: auto;  
     }
 }
 
 @media screen and (max-width: 789px) { /* phone resolution */
-    #hero-img {
+    .homepage #hero-img {
         height: 400px; 
     }
     
-    #hero-img .rms-title h1 {
+    .homepage #hero-img .rms-title h1 {
         font-size: 40px; 
         width: auto; 
     }
 
-    #form-group {
+    .homepage #form-group {
         height: 400px;
         width: auto;  
     }
 }
 
-#hero-img .form-group input[type="text"] {
+.homepage #hero-img .form-group input[type="text"] {
     width: 500px;
     height: 50px;
     border-radius: 5px;
@@ -75,7 +75,7 @@ body {
 }
 
 @media screen and (min-width: 790px) and (max-width: 1023px){ /* tablet resolution */
-    #hero-img .form-group input[type="text"] {
+    .homepage #hero-img .form-group input[type="text"] {
         width: 500px;
         border-radius: 5px;
         border-top-left-radius: 0;
@@ -89,7 +89,7 @@ body {
 }
 
 @media screen and (max-width: 789px){ /* phone resolution */
-    #hero-img .form-group input[type="text"] {
+    .homepage #hero-img .form-group input[type="text"] {
         width: 400px;
         border-radius: 5px;
         border-top-left-radius: 5px;
@@ -104,7 +104,7 @@ body {
     }
 }
 @media screen and (max-width: 430px){ /* smaller phone resolution */
-    #hero-img .form-group input[type="text"] {
+    .homepage #hero-img .form-group input[type="text"] {
         width: 250px;
         border-radius: 5px;
         border-top-left-radius: 5px;
@@ -119,7 +119,7 @@ body {
     }
 }
 
-#hero-img .form-group select {
+.homepage #hero-img .form-group select {
     width: 150px;
     height: 50px;
     border-radius: 5px;
@@ -135,42 +135,42 @@ body {
 }
 
 
-#hero-img input[type="text"]:focus {
+.homepage #hero-img input[type="text"]:focus {
     box-shadow: 0 0 0 4px var(--dark-grey);
 }
 
-#hero-img .form-group select:focus {
+.homepage #hero-img .form-group select:focus {
     box-shadow: 0 0 0 4px var(--dark-grey);
 }
 
-#hero-img form {
+.homepage #hero-img form {
     display: flex;
     gap: 2px;
 }
 
-#hero-img form .form-group {
+.homepage #hero-img form .form-group {
     position: relative;
 }
 
 @media screen and (max-width: 789px) {
-    #hero-img form {
+    .homepage #hero-img form {
         flex-direction: column; 
 
     }
 
-    #hero-img form .form-group {
+    .homepage #hero-img form .form-group {
         margin-bottom: 10px; 
         display: flex;
         justify-content: center;
     }
         
-    #hero-img form .form-group select {
+    .homepage #hero-img form .form-group select {
         border-radius: 5px;
         border-top-right-radius: 5;
         border-bottom-right-radius: 5;
     }
         
-    /* #hero-img .form-group input[type="text"] {
+    /* .homepage #hero-img .form-group input[type="text"] {
         width: 320px;
         height: 50px;
         border-radius: 8px;
@@ -179,7 +179,7 @@ body {
         box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
     } */
 }
-#hero-img form .form-group .icon {
+.homepage #hero-img form .form-group .icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -395,7 +395,7 @@ body {
 }
 
 /* TABLES */
-.main-container .card .card-content {
+.homepage .main-container .card .card-content {
     padding: 10px;
     flex: auto;
 }

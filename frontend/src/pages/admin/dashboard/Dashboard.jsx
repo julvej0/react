@@ -1,9 +1,10 @@
 import React from "react";
 import "./dashboard.css";
+import { AdminNavbar } from "../../../components";
 
 const Dashboard = () => {
   return (
-    <>
+    <div className="DashboardPage">
       <nav>
         <i className="bx bx-menu toggle-sidebar" />
         <span className="divider" />
@@ -17,12 +18,13 @@ const Dashboard = () => {
           <small>Admin</small>
         </div>
       </nav>
-
-      {/* <div id="loading-screen">
-    <div className="loading-img">
-      <img src="../../../assets/images/redspartan_logo.png" alt="redSpartan" />
-    </div>
-  </div> */}
+    
+      <AdminNavbar />
+          {/* <div id="loading-screen">
+          <div className="loading-img">
+            <img src="../../../assets/images/redspartan_logo.png" alt="redSpartan" />
+          </div>
+          </div> */}
       <section id="appbar-and-content">
         {/*?php include_once  dirname(__FILE__, 4) . '/components/navbar/admin-navbar.php'; ?*/}
         <main>
@@ -253,7 +255,7 @@ const Dashboard = () => {
         </main>
         {/* Section closing tag from navbar */}
       </section>
-    </>
+    </div>
   );
 };
 

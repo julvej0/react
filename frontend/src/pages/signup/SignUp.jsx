@@ -3,7 +3,8 @@ import "./signup.css"
 
 const SignUp = () => {
   return (
-    <>
+    
+    <div className="SignUpPage">
       {/*--------------------------------------------------------- sign up page --------------------------------------------------------*/}
       <div id="whole_page">
         {/* <img src="../../../assets/images/redspartan_logo.png" style="width: 150px; height: 170px; position: fixed; bottom: 0; right: 0; margin-bottom: 50px; margin-right: 25px; border-radius: 50% / 20%;"> */}
@@ -184,7 +185,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

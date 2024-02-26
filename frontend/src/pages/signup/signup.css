@@ -1,22 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-  font-family: Poppins;
-}
-
-html,
-body {
+.SignUpPage {
   height: 100%;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  text-decoration: none;
 }
 
-#whole_page {
+.SignUpPage #whole_page {
   width: 100%;
   height: 100%;
   background-color: white;
@@ -26,7 +16,7 @@ body {
   /* Scale the page by 80% */
 }
 
-#signup-container {
+.SignUpPage #signup-container {
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -40,7 +30,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#container-header {
+.SignUpPage #container-header {
   background-color: #cf102d;
   height: 100px;
   border-top-right-radius: 10px;
@@ -53,17 +43,17 @@ body {
   /* center the content vertically */
 }
 
-#h2Login {
+.SignUpPage #h2Login {
   margin-top: 45px;
   color: white;
 }
 
-#whole-page h1 {
+.SignUpPage #whole-page h1 {
   font-size: 23px;
   color: white;
 }
 
-#user_input {
+.SignUpPage #user_input {
   margin-left: 100px;
   margin-right: 100px;
   display: flex;
@@ -72,7 +62,7 @@ body {
   align-items: left;
 }
 
-#form-container {
+.SignUpPage #form-container {
   margin-right: 100px;
   margin-left: 50px;
   display: flex;
@@ -81,22 +71,22 @@ body {
   align-items: left;
 }
 
-.labelSubHeader {
+.SignUpPage .labelSubHeader {
   font-size: 0.75rem;
   font-weight: bold;
   color: gray;
   margin-bottom: 2px;
 }
 
-#labelSignUp {
+.SignUpPage #labelSignUp {
   text-align: center;
   font-size: medium;
 }
 
-#email,
-.passwordInput,
-#confirmPasswordInput,
-#srcode {
+.SignUpPage #email,
+.SignUpPage .passwordInput,
+.SignUpPage #confirmPasswordInput,
+.SignUpPage #srcode {
   height: 50px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -108,10 +98,10 @@ body {
   transition: all 0.3s ease-out;
 }
 
-#email:hover,
-.passwordInput:hover,
-#confirmPasswordInput:hover,
-#srcode:hover {
+.SignUpPage #email:hover,
+.SignUpPage .passwordInput:hover,
+.SignUpPage #confirmPasswordInput:hover,
+.SignUpPage #srcode:hover {
   height: 50px;
   border-style: solid;
   background-color: #f9f9f9;
@@ -124,13 +114,13 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.user-name {
+.SignUpPage .user-name {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.labelSubHeader2 {
+.SignUpPage .labelSubHeader2 {
   font-size: 0.75rem;
   font-weight: bold;
   color: gray;
@@ -138,8 +128,8 @@ body {
   display: block;
 }
 
-#mName,
-#lName {
+.SignUpPage #mName,
+.SignUpPage #lName {
   height: 50px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -151,7 +141,7 @@ body {
   transition: all 0.3s ease-out;
 }
 
-#fName {
+.SignUpPage #fName {
   height: 50px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -162,8 +152,8 @@ body {
   transition: all 0.3s ease-out;
 }
 
-#mName:hover,
-#lName:hover {
+.SignUpPage #mName:hover,
+.SignUpPage #lName:hover {
   height: 50px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -188,13 +178,13 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.password-container {
+.SignUpPage .password-container {
   display: flex;
   flex-direction: row;
 }
 
-#passwordToggle,
-#passwordToggle2 {
+.SignUpPage #passwordToggle,
+.SignUpPage #passwordToggle2 {
   position: absolute;
   top: 50%;
   right: 0.5em;
@@ -205,7 +195,7 @@ body {
   color: gray;
 }
 
-input[type="button"] {
+.SignUpPage input[type="button"] {
   background-color: #cf102d;
   color: #ffffff;
   border: none;
@@ -216,29 +206,29 @@ input[type="button"] {
   transition: all 0.3s ease-out;
 }
 
-input[type="button"]:hover {
+.SignUpPage input[type="button"]:hover {
   background-color: #cf102d;
   color: white;
   transition: all 0.3s ease-out;
   opacity: 0.7;
 }
 
-#a_SignUp {
+.SignUpPage #a_SignUp {
   font-weight: bold;
   color: blue;
 }
 
-#a_SignUp:hover {
+.SignUpPage #a_SignUp:hover {
   font-weight: bold;
   color: #cf102d;
 }
 
-#passwordTooltip,
-#emailTooltip {
+.SignUpPage #passwordTooltip,
+.SignUpPage #emailTooltip {
   font-size: 12px;
 }
 
-.toggle-password2 {
+.SignUpPage .toggle-password2 {
   margin-top: 17px;
   margin-left: -30px;
   position: absolute;
@@ -248,7 +238,7 @@ input[type="button"]:hover {
 /* MOdal */
 
 /* The Modal (background) */
-.modal {
+.SignUpPage .modal {
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -266,7 +256,7 @@ input[type="button"]:hover {
 }
 
 /* Modal Content/Box with animation*/
-.modal-container {
+.SignUpPage .modal-container {
   display: flex;
   align-items: left;
   justify-content: center;
@@ -296,7 +286,7 @@ input[type="button"]:hover {
   }
 }
 
-.modal-container.fade-out {
+.SignUpPage .modal-container.fade-out {
   animation: slide-out 0.3s ease-in;
 }
 
@@ -314,7 +304,7 @@ input[type="button"]:hover {
 
 /* modal header */
 
-#modal-header {
+.SignUpPage #modal-header {
   background-color: #cf102d;
   height: 70px;
   border-top-right-radius: 5px;
@@ -334,7 +324,7 @@ input[type="button"]:hover {
   z-index: 1;
 }
 
-#btnSubmit {
+.SignUpPage #btnSubmit {
   background-color: #cf102d;
   color: #ffffff;
   border: none;
@@ -347,11 +337,11 @@ input[type="button"]:hover {
   position: relative;
 }
 
-#btnSubmit:hover {
+.SignUpPage #btnSubmit:hover {
   background-color: #cf102d;
 }
 
-#userSrCode {
+.SignUpPage #userSrCode {
   width: 300px;
   border: 2px solid white;
   padding: 10px;
@@ -363,8 +353,8 @@ input[type="button"]:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#userEmailAddressInput,
-#userFullName {
+.SignUpPage #userEmailAddressInput,
+.SignUpPage #userFullName {
   width: 300px;
   border: 2px solid white;
   padding: 10px;
@@ -377,7 +367,7 @@ input[type="button"]:hover {
 }
 
 /* The Close Button */
-.close {
+.SignUpPage .close {
   color: #aaa;
   position: absolute;
   font-size: 28px;
@@ -388,15 +378,15 @@ input[type="button"]:hover {
   z-index: 2;
 }
 
-.close:hover,
-.close:focus {
+.SignUpPage .close:hover,
+.SignUpPage .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
   z-index: 2;
 }
 
-#otpVerification {
+.SignUpPage #otpVerification {
   width: 300px;
   height: 40px;
   border: 2px solid gray;
@@ -406,8 +396,8 @@ input[type="button"]:hover {
   color: #cf102d;
 }
 
-#otpVerification:hover,
-#otpVerification:focus {
+.SignUpPage #otpVerification:hover,
+.SignUpPage #otpVerification:focus {
   width: 300px;
   height: 40px;
   border: 2px solid greenyellow;
@@ -416,7 +406,7 @@ input[type="button"]:hover {
   padding-right: 10px;
 }
 
-#sendOtpLink {
+.SignUpPage #sendOtpLink {
   font-size: small;
   width: 300px;
   border: solid 2px #cf102d;
@@ -426,7 +416,7 @@ input[type="button"]:hover {
   font-weight: bold;
 }
 
-#sendOtpLink:hover {
+.SignUpPage #sendOtpLink:hover {
   font-size: small;
   width: 300px;
   border: none;

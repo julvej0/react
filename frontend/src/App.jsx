@@ -13,14 +13,12 @@ import Navbar from "./components/navbar/Navbar";
 import Nav from "./components/navbar/Nav";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import Login from "./pages/login/Login";
-import { AdminNavbar } from "./components";
 
 function App() {
   return (
     <>
       <Router>
         {/* <Navbar /> */}
-        {/* <AdminNavbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/publications" element={<Publications />} />

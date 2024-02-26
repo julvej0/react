@@ -1,4 +1,4 @@
-main .content-data {
+.DashboardPage main .content-data {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -13,7 +13,6 @@ main .sub-page {
 main .sub-page.active {
     display: block;
 }
-
 
 main .header {
     display: flex;

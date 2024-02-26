@@ -1,8 +1,11 @@
 import React from 'react'
 import "./documentDisplay.css"
+import Navbar from '../navbar/Navbar'
 
 const DocumentDisplay = ({title, }) => {
   return (
+    <div className='DocuDisplayPage'>
+      <Navbar/>
     <section id="main-content">
       <div className="page-title">
         <h3 className="animate__animated animate__fadeIn">{title}</h3>
@@ -202,6 +205,7 @@ const DocumentDisplay = ({title, }) => {
         </div>
       </div>
     </section>
+    </div>
   )
 }
 

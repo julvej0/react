@@ -1,9 +1,12 @@
 import React from "react";
 import "./about.css"
 import image from "../../../assets/images/rms-abt.jpg"
+import Navbar from "../../../components/navbar/Navbar";
 
 const About = () => {
   return (
+    <div className="AboutPage">
+      <Navbar />
     <section id="main-content">
       <div className="page-title">
         <h3 className="animate__animated animate__fadeIn">About Us</h3>
@@ -93,6 +96,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

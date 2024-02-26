@@ -1,5 +1,4 @@
 import React from "react";
-// import "./ipAssets.css"
 import { DocumentDisplay } from "../../../components";
 
 const IPassets = () => {

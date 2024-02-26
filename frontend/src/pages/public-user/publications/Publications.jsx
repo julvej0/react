@@ -1,5 +1,4 @@
 import React from "react";
-// import './publications.css'
 import { DocumentDisplay } from "../../../components";
 
 const Publications = () => {

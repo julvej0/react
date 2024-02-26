@@ -40,7 +40,7 @@ function Home() {
   // const ipassets = [];
 
   return (
-    <>
+    <div className="homepage">
       <Navbar/>
       {/* <div id="loading-screen">
         <div className="loading-img">
@@ -141,9 +141,8 @@ function Home() {
           </div>
         </div>
       </div>
-      
       <Footer />
-    </>
+    </div>
   );
 }
 

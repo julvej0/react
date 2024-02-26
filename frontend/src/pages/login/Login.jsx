@@ -2,21 +2,16 @@ import React from "react";
 import "./login.css"
 import bsulogo from "../../assets/images/batStateUNeu-logo.png"
 import background from "../../assets/images/background_img.jpg"
+import { FaEyeSlash, FaEye  } from "react-icons/fa";
 
 
 const Login = () => {
   return (
-    <>
+    <div className="LoginPage">
       <div id="whole_page">
         <img
-          id="background1"
+          id="background"
           src={background}
-          style={{
-            // width: "100%",
-            // height: "100%",
-            // position: "fixed", 
-            // opacity: rgba(128, 128, 128.08),
-          }}
         />
         {/* <div style="width: 155px; height: 230px; background-color: white; position: fixed; bottom: 0; right: 0; margin-bottom: 20px; margin-right: 20px; z-index: 1; padding: 20px; border-radius: 50% / 20%;">
   <img src="../../../assets/images/redspartan_logo.png" style="width: 150px; height: 160px; position: fixed; bottom: 0; right: 0; margin-bottom: 50px; margin-right: 25px; z-index: 2; border-radius: 50% / 20%;">
@@ -24,14 +19,14 @@ const Login = () => {
         <img
           src={bsulogo}
           style={{
-            width: 100,
-            height: 100,
+            width: 120,
+            height: 120,
             position: "fixed",
             border: "solid 3px #cf102d",
             backgroundColor: "white",
             borderRadius: "50%",
             zIndex: 1,
-            transform: "translate(-50%, -300%)",
+            transform: "translate(-50%, -295%)",
             top: "50%",
             left: "50%",
           }}
@@ -63,7 +58,7 @@ const Login = () => {
                   minLength={8}
                   maxLength={16}
                 />
-                <i className="toggle-password2 fas fa-eye-slash" />
+                <FaEyeSlash size={25} className="toggle-password2 fas fa-eye-slash" />
               </div>
               <br />
               <input name="login" type="submit" defaultValue=" LOGIN " />
@@ -166,7 +161,7 @@ const Login = () => {
                 maxLength={16}
                 required=""
               />
-              <i className="toggle-password fas fa-eye-slash" />
+              <FaEyeSlash size={20} className="toggle-password fas fa-eye-slash" />
             </div>
             <span
               id="passwordTooltip"
@@ -183,7 +178,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
