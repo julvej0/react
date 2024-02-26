@@ -1,5 +1,5 @@
 import React from "react";
-// import "./login.css"
+import "./login.css"
 import bsulogo from "../../assets/images/batStateUNeu-logo.png"
 import background from "../../assets/images/background_img.jpg"
 
@@ -9,12 +9,13 @@ const Login = () => {
     <>
       <div id="whole_page">
         <img
+          id="background1"
           src={background}
           style={{
-            opacity: "0.7",
-            width: "100%",
-            height: "100%",
-            position: "fixed",
+            // width: "100%",
+            // height: "100%",
+            // position: "fixed", 
+            // opacity: rgba(128, 128, 128.08),
           }}
         />
         {/* <div style="width: 155px; height: 230px; background-color: white; position: fixed; bottom: 0; right: 0; margin-bottom: 20px; margin-right: 20px; z-index: 1; padding: 20px; border-radius: 50% / 20%;">
@@ -37,7 +38,7 @@ const Login = () => {
         />
         {/*--------------------------------------------------------- login header --------------------------------------------------------*/}
         <div id="login_container">
-          <div id="container-header">
+          <div id="container-header1">
             <h2 id="h2Login">SIGN IN</h2>
           </div>
           <br />

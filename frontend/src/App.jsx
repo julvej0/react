@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         {/* <AdminNavbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />

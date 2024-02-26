@@ -406,6 +406,13 @@
     display: block;
     margin-right: 30px;
   }
+
+  .tab-nav .signin-btn{
+    background: var(--primary);
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+
+  }
 }
 
 @media screen and (max-width: 760px){ /* phone resolution */
@@ -436,6 +443,14 @@
 
   .tab-nav a {
     color: #ffffff;
+    
+  }
+
+  .tab-nav .signin-btn{
+    background: var(--primary);
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+
   }
 
 

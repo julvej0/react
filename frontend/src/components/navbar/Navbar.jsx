@@ -43,12 +43,12 @@ const Navbar = () => {
                 <Link to="/ip-assets">IP ASSETS</Link>
               </li>
               <li className="pb-link">
-                <Link to="/abt-link">PUBLICATIONS</Link>
+                <Link to="/publications">PUBLICATIONS</Link>
               </li>
               <li className="abt-link">
                 <Link to="/about">ABOUT US</Link>
               </li>
-              <a href="/" className="signin-btn">
+              <a href="/login" className="signin-btn">
                 Sign In
               </a>
             </ul>
@@ -71,12 +71,12 @@ const Navbar = () => {
             <Link to="/ip-assets">IP ASSETS</Link>
           </li>
           <li className="pb-link">
-            <Link to="/abt-link">PUBLICATIONS</Link>
+            <Link to="/publications">PUBLICATIONS</Link>
           </li>
           <li className="abt-link">
             <Link to="/about">ABOUT US</Link>
           </li>
-          <a to="/" className="signin-btn">
+          <a href="/login" className="signin-btn">
             Sign In
           </a>
         </ul>
