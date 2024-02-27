@@ -24,16 +24,16 @@ body {
   transition: all .3s ease;
   z-index: 200;
 }
-#sidebar::-webkit-scrollbar {
+.AdminNavbarPage #sidebar::-webkit-scrollbar {
 display: none;
 }
 
-#sidebar.collapse-down {
+.AdminNavbarPage #sidebar.collapse-down {
   max-width: 60px;
   overflow-x: hidden;
 }
 
-#sidebar .logo {
+.AdminNavbarPage #sidebar .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,36 +41,36 @@ display: none;
   transition: all .5s linear;
 }
 
-#sidebar .logo .logo-wrapper {
+.AdminNavbarPage #sidebar .logo .logo-wrapper {
   width: 120px;
   padding-top: 20px;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
-#sidebar.collapse-down .logo .logo-wrapper{
+.AdminNavbarPage #sidebar.collapse-down .logo .logo-wrapper{
   width: 50px;
 }
 
-#sidebar .logo img {
+.AdminNavbarPage #sidebar .logo img {
   object-fit: cover;
   border-radius: 50%;
   width: 100%;
 
 }
 
-#sidebar .logo .logo-title{
+.AdminNavbarPage #sidebar .logo .logo-title{
   text-align: center;
   margin-top: 8px;
   width: 200px;
   font-size: 16px;
 }
 
-#sidebar.collapse-down .logo .logo-title {
+.AdminNavbarPage #sidebar.collapse-down .logo .logo-title {
   display: none;
 }
 
-#sidebar .icon {
+.AdminNavbarPage #sidebar .icon {
   min-width: 48px;
   display: flex;
   justify-content: center;
@@ -78,26 +78,26 @@ display: none;
   margin-right: 6px;
 }
 
-#sidebar .icon-right {
+.AdminNavbarPage #sidebar .icon-right {
   margin-left: auto;
   transition: all .3s ease;
 }
 
-#sidebar .rotate {
+.AdminNavbarPage #sidebar .rotate {
   transform: rotate(180deg);
 }
 
-#sidebar .side-menu {
+.AdminNavbarPage #sidebar .side-menu {
   margin: 27px 0;
   padding: 0 20px;
   transition: all .3s ease;
 }
 
-#sidebar.collapse-down .side-menu {
+.AdminNavbarPage #sidebar.collapse-down .side-menu {
   padding: 0 6px;
 }
 
-#sidebar .side-menu a {
+.AdminNavbarPage #sidebar .side-menu a {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -109,20 +109,20 @@ display: none;
   white-space: nowrap;
 }
 
-#sidebar .side-menu > li > a:hover {
+.AdminNavbarPage #sidebar .side-menu > li > a:hover {
   background: var(--grey);
 }
 
-#sidebar .side-menu > li > a.active .icon-right {
+.AdminNavbarPage #sidebar .side-menu > li > a.active .icon-right {
   transform: rotateZ(90deg);
 }
 
-#sidebar .side-menu > li > a.active,
-#sidebar .side-menu > li > a.active:hover {
+.AdminNavbarPage #sidebar .side-menu > li > a.active,
+.AdminNavbarPage #sidebar .side-menu > li > a.active:hover {
   background: var(--primary);
   color: var(--light);
 }
-#sidebar .divider {
+.AdminNavbarPage #sidebar .divider {
   margin-top: 24px;
   font-size: 12px;
   text-transform: uppercase;
@@ -132,47 +132,47 @@ display: none;
   white-space: nowrap;
 }
 
-#sidebar.collapse-down .divider {
+.AdminNavbarPage #sidebar.collapse-down .divider {
   text-align: center;
 }
 
-#sidebar .side-dropdown {
+.AdminNavbarPage #sidebar .side-dropdown {
   padding-left: 54px;
   max-height: 0;
   overflow: hidden;
   transition: all .15s ease;
 }
 
-#sidebar .side-dropdown.show {
+.AdminNavbarPage #sidebar .side-dropdown.show {
   max-height: 1000px;
 }
 
-#sidebar .side-dropdown a:hover {
+.AdminNavbarPage #sidebar .side-dropdown a:hover {
   color: var(--primary);
 }
 
-#sidebar .side-dropdown > li > a.active {
+.AdminNavbarPage #sidebar .side-dropdown > li > a.active {
   color: var(--primary);
 }
 /* SIDEBAR */
 
-.logout {
+.AdminNavbarPage .logout {
   cursor: pointer;
 }
 
 /* APPBAR CONTENT */
-#appbar-and-content {
+.AdminNavbarPage #appbar-and-content {
   position: relative;
   width: calc(100% - var(--sidenav-size));
   left: var(--sidenav-size);
   transition: all 0.3s ease;
 }
-#appbar-and-content.collapse-wide {
+.AdminNavbarPage #appbar-and-content.collapse-wide {
   width: calc(100% - 60px);
   left: 60px;
 }
 /* APPBAR */
-nav {
+ nav {
   background: var(--primary);
   height: 64px;
   padding: 0 20px;
@@ -180,15 +180,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-}
-nav .toggle-sidebar {
+ }
+ .AdminNavbarPage nav .toggle-sidebar {
   font-size: 18px;
   cursor: pointer;
   color: var(--light);
   padding: 16px;
 }
-
-nav .profile {
+.AdminNavbarPage  nav .profile {
   padding: 10px 16px;
   display: flex;
   flex-direction: column;
@@ -198,7 +197,7 @@ nav .profile {
   align-items: flex-end;
 }
 
-#account-settings.active {
+.AdminNavbarPage #account-settings.active {
   background-color: #e9e9e9;
   color: #333;
 }

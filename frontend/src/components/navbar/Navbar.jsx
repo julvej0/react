@@ -1,9 +1,9 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import batstateulogo from "../../assets/images/batStateUNeu-logo.png";
+// import { useState, useEffect } from "react";
 
 const Navbar = () => {
   function toggleNavbar() {

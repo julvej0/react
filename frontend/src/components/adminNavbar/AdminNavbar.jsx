@@ -1,12 +1,20 @@
 import React from "react";
 import "./adminnavbar.css"
+import { MdOutlineDashboard, MdOutlineMenuBook, MdOutlineFolder,MdOutlineGroups  } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa6";
+import { IoLogInOutline } from "react-icons/io5";
+import { HiOutlineCog6Tooth } from "react-icons/hi2";
+import { CiLogout } from "react-icons/ci";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import bsulogo2 from "../../assets/images/batStateUNeu-logo.png"
 
 const AdminNavbar = () => {
   return (
+    <div className="AdminNavbarPage">
     <section id="sidebar">
       <div className="logo">
         <div className="logo-wrapper">
-          <img src="../../../assets/images/batStateUNeu-logo.png" alt="" />
+          <img src={bsulogo2} alt="" />
         </div>
         <h4 className="logo-title">Research Management Services</h4>
       </div>
@@ -20,7 +28,7 @@ const AdminNavbar = () => {
             id="dashboard-link"
             onclick="showLoadingScreen()"
           >
-            <i className="bx bxs-dashboard icon" />
+            <MdOutlineDashboard className="bx bxs-dashboard icon" />
             Dashboard
           </a>
         </li>
@@ -33,7 +41,7 @@ const AdminNavbar = () => {
             id="publication-link"
             onclick="showLoadingScreen()"
           >
-            <i className="bx bxs-book-open icon" />
+            <MdOutlineMenuBook className="bx bxs-book-open icon" />
             Publications
           </a>
         </li>
@@ -43,7 +51,7 @@ const AdminNavbar = () => {
             id="ip-assets-link"
             onclick="showLoadingScreen()"
           >
-            <i className="bx bxs-folder icon" />
+            <MdOutlineFolder className="bx bxs-folder icon" />
             IP Assets
           </a>
         </li>
@@ -53,7 +61,7 @@ const AdminNavbar = () => {
             id="author-link"
             onclick="showLoadingScreen()"
           >
-            <i className="bx bxs-group icon" />
+            <MdOutlineGroups className="bx bxs-group icon" />
             Authors
           </a>
         </li>
@@ -63,7 +71,7 @@ const AdminNavbar = () => {
             id="user-accounts-link"
             onclick="showLoadingScreen()"
           >
-            <i className="bx bxs-user icon" />
+            <FaRegUser className="bx bxs-user icon" />
             User Accounts
           </a>
         </li>
@@ -76,15 +84,15 @@ const AdminNavbar = () => {
             id="log-link"
             onclick="showLoadingScreen()"
           >
-            <i className="bx bxs-log-in icon" />
+            <IoLogInOutline className="bx bxs-log-in icon" />
             Logs
           </a>
         </li>
         <li id="account-settings">
           <a href="#" id="account-link">
-            <i className="bx bxs-cog icon" />
+            <HiOutlineCog6Tooth className="bx bxs-cog icon" />
             Account Settings
-            <i className="bx bx-chevron-right icon-right" />
+            <MdKeyboardArrowDown className="bx bx-chevron-right icon-right" />
           </a>
           <ul className="side-dropdown">
             <li>
@@ -107,12 +115,13 @@ const AdminNavbar = () => {
             </li>
           </ul>
           <a className="logout" onclick="return showLogoutAlert()">
-            <i className="bx bx-log-out icon rotate" name="logout" />
+            <CiLogout className="bx bx-log-out icon rotate" name="logout" />
             Sign Out
           </a>
         </li>
       </ul>
     </section>
+    </div>
   );
 }
 

@@ -1,18 +1,20 @@
 import batstateulogo from "../../../assets/images/batStateUNeu-logo.png";
-import { Link } from "react-router-dom";
-import "./home.css";
 import vipcorals from "../../../assets/images/vipcorals.webp";
 import "../../../css/boxiconsV2.1.4.min.css";
-import { FaArrowRight } from "react-icons/fa";
+import "./home.css";
 import useSWR from "swr";
-import { useState } from "react";
-import {
-  getMostViewedPapers, getRecentDatePublished, getRecentDateRegistered, getTopCampus, getTopContributions,
-} from "./functionalities";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import {getMostViewedPapers, 
+        getRecentDatePublished, 
+        getRecentDateRegistered, 
+        getTopCampus, 
+        getTopContributions } from "./functionalities";
+import { Navbar } from "../../../components";
 import { API } from "../../../API";
 import Card from "./Card";
 import Footer from "../../../components/footer/Footer";
-import { Navbar } from "../../../components";
+// import { useState } from "react";
 
 function Home() {
   // const [isError, setIsError] = useState(false);

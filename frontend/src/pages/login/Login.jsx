@@ -59,7 +59,7 @@ const Login = () => {
                   minLength={8}
                   maxLength={16}
                 />
-                <FaEyeSlash size={20} className="toggle-password2 fas fa-eye-slash" />
+                <FaEyeSlash size={20} className="toggle-password2 " />
               </div>
               <br />
               <input name="login" type="submit" defaultValue=" LOGIN " />
