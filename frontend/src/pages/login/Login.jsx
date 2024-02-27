@@ -59,7 +59,7 @@ const Login = () => {
                   minLength={8}
                   maxLength={16}
                 />
-                <FaEyeSlash size={25} className="toggle-password2 fas fa-eye-slash" />
+                <FaEyeSlash size={20} className="toggle-password2 fas fa-eye-slash" />
               </div>
               <br />
               <input name="login" type="submit" defaultValue=" LOGIN " />
@@ -72,6 +72,7 @@ const Login = () => {
                 }}
               >
                 <hr
+                className="left-line"
                   style={{
                     flex: 1,
                     marginRight: 10,
@@ -79,8 +80,9 @@ const Login = () => {
                   }}
                 />
                 
-                <label style={{ textAlign: "center", color: "gray" }}>OR</label>
+                <label className="or" style={{ textAlign: "center", color: "gray" }}>OR</label>
                 <hr
+                className="right-line"
                   style={{
                     flex: 1,
                     marginLeft: 10,

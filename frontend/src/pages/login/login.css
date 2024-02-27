@@ -39,7 +39,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 789px){ /* phone resolution */
+@media screen and (max-width: 767px){ /* phone resolution */
   .LoginPage #login_container {
     width: 300px;
     height: 380px;
@@ -52,19 +52,9 @@
   }
 }
 
-@media screen and (max-width: 789px){ /* phone resolution */
-  .bsuLogo{
-    /* width: 110;
-    height: 110;
-    position: fixed;
-    border: solid 3px #cf102d;
-    background-color: white;
-    border-radius: 50%;
-    z-index: 1;
-    transform: translate(-50%, -380%);
-    top: 50%;
-    left: 50%; */
-    display: none;
+@media screen and (max-width: 767px){ /* phone resolution */
+  .LoginPage .bsuLogo{
+    margin-top: 70px;
     }
 }
 
@@ -101,20 +91,28 @@
   color:white
 }
 
-@media screen and (max-width: 789px){ /* phone resolution */
+@media screen and (max-width: 767px){ /* phone resolution */
   .LoginPage #container-header1 {
     background-color:#d10e0e;
-    height: 50px;
+    height: 90px;
     margin:0;
     display: flex;
     justify-content: center; 
     align-items: center; 
   }
   .LoginPage #h2Login {
-    margin-top: 15px;
+    margin-top: 55px;
     font-size: small;
     color: white;
   }
+  .LoginPage #login_container #labelSignUp{
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    display: flex; 
+    align-items: center;
+    font-size: 12px;
+}
 }
 
 .LoginPage form {
@@ -127,7 +125,7 @@
 }
 
 
-@media screen and (max-width: 789px){ /* phone resolution */
+@media screen and (max-width: 767px){ /* phone resolution */
   .LoginPage form {
     margin-left: 0;
     margin-right: 0;
@@ -140,13 +138,12 @@
     color: gray;
     margin-bottom: 2px;
 }
-@media screen and (max-width: 789px){ /* phone resolution */
+@media screen and (max-width: 767px){ /* phone resolution */
   .formDiv{
     width: 220px;
     display: flex;
     flex-direction: column;
     transform: translate(20%, -3%);
-    margin: 0;
     padding: 0;
   }
 
@@ -156,8 +153,6 @@
     color: gray;
     margin-bottom: -1px;
   }
-
-
 }
 
 
@@ -177,20 +172,20 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  @media screen and (max-width: 789px){ /* phone resolution */
+  @media screen and (max-width: 767px){ /* phone resolution */
   .LoginPage #login_email, 
   .LoginPage .passwordInput {
-    height: 50px;
-    width: 0;
-    font-size: small;
+    height: 40px;
+    font-size: 11px;
     background-color: #f9f9f9;
     border-radius: 5px;
     border-width: 2px;
     border-style: solid;
-    padding-left: 2px;
+    padding-left: 5px;
     padding-right: 0;
-    /* padding-bottom: -50px; */
+    margin-bottom: -20px;
     }
+    
     /* .LoginPage #login_email:hover, 
     .LoginPage .passwordInput:hover {
     padding-left: 0;
@@ -257,7 +252,25 @@
     opacity: 0.5;
   }
 
-  @media screen and (max-width: 789px){ /* phone resolution */
+  @media screen and (max-width: 767px){ /* phone resolution */
+    .left-line, .or, .right-line{
+      margin-top: 2px;
+      margin-bottom: -5px;
+    }
+    .or{
+      font-size: small;
+    }
+  }
+  .LoginPage #a_SignUp {
+    font-weight: bold;
+    color: blue;
+  }
+  .LoginPage #a_SignUp:hover {
+    font-weight: bold;
+    color: #cf102d;
+  }
+  
+  @media screen and (max-width: 767px){ /* phone resolution */
     .LoginPage input[type="submit"], input[type="button"] {
       border-radius: 5px;
       padding: 10px 20px;
@@ -266,7 +279,7 @@
       transition: all 0.3s ease-out;
       /* height: 20px; */
       font-size: x-small;
-      margin-bottom: -5px;
+      margin-bottom: -10px;
     }
     .LoginPage input[type="submit"]:hover, input[type="button"]:hover {
       background-color: #cf102d;
@@ -278,16 +291,8 @@
       font-weight: bold;
       color: blue;
       font-size: 10px;
+      transform: translate(3%, 90%);
     }
-  }
-
-  .LoginPage #a_SignUp {
-    font-weight: bold;
-    color: blue;
-  }
-  .LoginPage #a_SignUp:hover {
-    font-weight: bold;
-    color: #cf102d;
   }
 
 /* modal */
@@ -441,16 +446,23 @@ margin-top: 12px;
 margin-left: 380px;
 position: absolute;
 cursor: pointer;
-}
+}formDiv
 
 .LoginPage .toggle-password2 {
-  margin-top: 17px;
+  margin-top: 15px;
   margin-left: -30px;
   position: absolute;
   cursor: pointer;
-  
 }
-
+@media screen and (max-width: 767px){ /* phone resolution */
+  .LoginPage .toggle-password2 {
+    margin-top: 14px;
+    height: 12px;
+    margin-left: -30px;
+    position: absolute;
+    cursor: pointer;
+  }
+}
 .LoginPage #passwordTooltip, 
 .LoginPage #emailTooltip {
   font-size: 12px;

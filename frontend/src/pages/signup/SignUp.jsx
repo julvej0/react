@@ -1,6 +1,8 @@
 import React from "react";
 import "./signup.css"
 import background from "../../assets/images/background_img.jpg"
+import bsulogo from "../../assets/images/batStateUNeu-logo.png"
+import { FaEyeSlash, FaEye  } from "react-icons/fa";
 
 const SignUp = () => {
   return (
@@ -16,7 +18,8 @@ const SignUp = () => {
         />
         <div id="signup-container">
           <img
-            src="./../../assets/images/batStateUNeu-logo.png"
+          className="bsuLogo2"
+            src={bsulogo}
             style={{
               width: 90,
               height: 90,
@@ -40,6 +43,7 @@ const SignUp = () => {
             action="sample_db/create-account.php"
             method="POST"
           >
+            <div></div>
             <label className="labelSubHeader">FIRST NAME</label>
             <input id="fName" name="fName" placeholder="Juan" type="text" />
             <br />
@@ -92,7 +96,7 @@ const SignUp = () => {
                 minLength={8}
                 maxLength={16}
               />
-              <i className="toggle-password2 fas fa-eye-slash" />
+              <FaEyeSlash className="toggle-password2 fas fa-eye-slash" />
             </div>
             <br />
             <label className="labelSubHeader">CONFIRM PASSWORD</label>
@@ -105,7 +109,7 @@ const SignUp = () => {
                 minLength={8}
                 maxLength={16}
               />
-              <i className="toggle-password2 fas fa-eye-slash" />
+              <FaEyeSlash className="toggle-password2 fas fa-eye-slash" />
             </div>
             <span
               id="passwordTooltip"
