@@ -161,7 +161,7 @@
   }
 }
 
-.SignUpPage #email:hover,
+/* .SignUpPage #email:hover,
 .SignUpPage .passwordInput:hover,
 .SignUpPage #confirmPasswordInput:hover,
 .SignUpPage #srcode:hover {
@@ -175,9 +175,9 @@
   width: 400px;
   border-color: greenyellow;
   transition: all 0.3s ease-out;
-}
+} */
 @media screen and (max-width: 767px){ 
-.SignUpPage #email:hover,
+/* .SignUpPage #email:hover,
 .SignUpPage .passwordInput:hover,
 .SignUpPage #confirmPasswordInput:hover,
 .SignUpPage #srcode:hover {
@@ -191,7 +191,7 @@
   width: 400px;
   transition: all 0.3s ease-out;
   display: none;
-  }
+  } */
 .SignUpPage #labelSignUp {
   text-align: center;
   font-size: medium;
@@ -267,7 +267,7 @@
   }
 }
 
-.SignUpPage #mName:hover,
+/* .SignUpPage #mName:hover,
 .SignUpPage #lName:hover {
   height: 50px;
   background-color: #f9f9f9;
@@ -279,9 +279,9 @@
   width: 195px;
   border-color: greenyellow;
   transition: all 0.3s ease-out;
-}
+} */
 @media screen and (max-width: 767px){ /* phone resolution */
-.SignUpPage #mName:hover,
+/* .SignUpPage #mName:hover,
 .SignUpPage #lName:hover {
   height: 0;
   background-color: #f9f9f9;
@@ -293,9 +293,9 @@
   width: 0x;
   border-color: greenyellow;
   transition: all 0.3s ease-out;
+  } */
 }
-}
-#fName:hover {
+/* #fName:hover {
   height: 50px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -303,9 +303,9 @@
   border-style: solid;
   padding-left: 10px;
   padding-right: 10px;
-}
+} */
 @media screen and (max-width: 767px){ /* phone resolution */
-  #fName:hover {
+  /* #fName:hover {
     height: 0;
     background-color: #f9f9f9;
     border-radius: 5px;
@@ -313,7 +313,7 @@
     border-style: solid;
     padding-left: 10px;
     padding-right: 10px;
-  }
+  } */
 }
 .SignUpPage .password-container {
   display: flex;
@@ -360,22 +360,22 @@
     margin-bottom: -10px; 
   }
 }
-.SignUpPage input[type="button"]:hover {
+/* .SignUpPage input[type="button"]:hover {
   background-color: #cf102d;
   color: white;
   transition: all 0.3s ease-out;
   opacity: 0.7;
-}
+} */
 
 .SignUpPage #a_SignUp {
   font-weight: bold;
   color: blue;
 }
 
-.SignUpPage #a_SignUp:hover {
+/* .SignUpPage #a_SignUp:hover {
   font-weight: bold;
   color: #cf102d;
-}
+} */
 
 .SignUpPage #passwordTooltip,
 .SignUpPage #emailTooltip {
@@ -387,6 +387,12 @@
   margin-left: -30px;
   position: absolute;
   cursor: pointer;
+}
+@media screen and (max-width: 767px){ /* phone resolution */
+  .SignUpPage .toggle-password2 {
+    margin-top: 30px;
+    margin-left: -20px;
+  }
 }
 
 /* MOdal */
