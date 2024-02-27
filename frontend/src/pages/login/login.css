@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 
-#whole_page {
+.LoginPage #whole_page {
     width: 100%;
     height: 100%;
     background-color: gray;
@@ -26,7 +26,7 @@
   background-position: center;
 }
 
-#login_container {
+.LoginPage #login_container {
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -38,14 +38,41 @@
     transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 789px){ /* phone resolution */
+  .LoginPage #login_container {
+    width: 300px;
+    height: 380px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.3);
     
+  }
 }
 
-#login_container input {
+@media screen and (max-width: 789px){ /* phone resolution */
+  .bsuLogo{
+    /* width: 110;
+    height: 110;
+    position: fixed;
+    border: solid 3px #cf102d;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(-50%, -380%);
+    top: 50%;
+    left: 50%; */
+    display: none;
+    }
+}
+
+.LoginPage #login_container input {
     width: 100%;
 }
 
-#login_container #labelSignUp{
+.LoginPage #login_container #labelSignUp{
     align-items: center;
     justify-content: center;
     margin-top: 12px;
@@ -54,59 +81,127 @@
     font-size: 12px;
 }
 
-.LoginPage #container-header {
-    background-color:#020101;
-    height: 100px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin:0;
-    display: flex;
-    justify-content: center; /* center the content horizontally */
-    align-items: center; /* center the content vertically */
+.LoginPage #container-header1 {
+  background-color:#d10e0e;
+  height: 100px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin:0;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
- #h2Login {
+.LoginPage #h2Login {
   margin-top: 45px;
   color: white;
 }
 
-#h2pass {
+.LoginPage #h2pass {
   color:white
 }
 
-.LoginPage form {
-    margin-left: 100px;
-    margin-right: 100px;
+@media screen and (max-width: 789px){ /* phone resolution */
+  .LoginPage #container-header1 {
+    background-color:#d10e0e;
+    height: 50px;
+    margin:0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
+    justify-content: center; 
+    align-items: center; 
+  }
+  .LoginPage #h2Login {
+    margin-top: 15px;
+    font-size: small;
+    color: white;
+  }
 }
 
-.labelSubHeader{
+.LoginPage form {
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+
+@media screen and (max-width: 789px){ /* phone resolution */
+  .LoginPage form {
+    margin-left: 0;
+    margin-right: 0;
+}
+}
+
+.LoginPage .labelSubHeader{
     font-size: .75rem;
     font-weight: bold;
     color: gray;
     margin-bottom: 2px;
 }
+@media screen and (max-width: 789px){ /* phone resolution */
+  .formDiv{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(20%, -3%);
+    margin: 0;
+    padding: 0;
+  }
 
-#labelSignUp {
+  .LoginPage .labelSubHeader{
+    font-size: .60rem;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: -1px;
+  }
+
+
+}
+
+
+.LoginPage #labelSignUp {
     text-align: center;
     font-size: x-small;
 }
 
-#login_email, .passwordInput {
+.LoginPage #login_email, 
+.LoginPage .passwordInput {
     height: 50px;
+    width: 250px;
     background-color: #f9f9f9;
     border-radius: 5px;
     border-width: 2px;
     border-style: solid;
     padding-left: 10px;
     padding-right: 10px;
-    width: 250px;
+  }
+  @media screen and (max-width: 789px){ /* phone resolution */
+  .LoginPage #login_email, 
+  .LoginPage .passwordInput {
+    height: 50px;
+    width: 0;
+    font-size: small;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    padding-left: 2px;
+    padding-right: 0;
+    /* padding-bottom: -50px; */
+    }
+    /* .LoginPage #login_email:hover, 
+    .LoginPage .passwordInput:hover {
+    padding-left: 0;
+    padding-right: 0;
+    width: 0;
+    border-color: greenyellow;
+    } */
   }
 
-#login_email:hover, .passwordInput:hover {
+/* .LoginPage #login_email:hover, 
+.LoginPage .passwordInput:hover {
     height: 50px;
     border-style: solid;
     background-color: #f9f9f9;
@@ -116,13 +211,13 @@
     padding-right: 10px;
     width: 250px;
     border-color: greenyellow;
-}
+} */
 
-#password_container {
+.LoginPage #password_container {
     position: relative;
   }
   
-#passwordToggle {
+  .LoginPage #passwordToggle {
     position: absolute;
     top: 50%;
     right: 0.5em;
@@ -133,7 +228,7 @@
     color:gray;
 }
 
-#show-password-toggle:hover {
+.LoginPage #show-password-toggle:hover {
     position: absolute;
     top: 50%;
     right: 0.5em;
@@ -145,7 +240,7 @@
 }
   
 
-input[type="submit"], input[type="button"] {
+.LoginPage input[type="submit"], input[type="button"] {
     background-color: #cf102d;
     color: #ffffff;
     border: none;
@@ -155,26 +250,49 @@ input[type="submit"], input[type="button"] {
     cursor: pointer;
     transition: all 0.3s ease-out;
   }
-  
-  input[type="submit"]:hover, input[type="button"]:hover {
+  .LoginPage input[type="submit"]:hover, input[type="button"]:hover {
     background-color: #cf102d;
     color: white;
     transition: all 0.3s ease-out;
     opacity: 0.5;
   }
 
-  #a_SignUp {
+  @media screen and (max-width: 789px){ /* phone resolution */
+    .LoginPage input[type="submit"], input[type="button"] {
+      border-radius: 5px;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+      /* height: 20px; */
+      font-size: x-small;
+      margin-bottom: -5px;
+    }
+    .LoginPage input[type="submit"]:hover, input[type="button"]:hover {
+      background-color: #cf102d;
+      color: white;
+      transition: all 0.3s ease-out;
+      opacity: 0.5;
+    }
+    .LoginPage #a_SignUp {
+      font-weight: bold;
+      color: blue;
+      font-size: 10px;
+    }
+  }
+
+  .LoginPage #a_SignUp {
     font-weight: bold;
     color: blue;
   }
-  #a_SignUp:hover {
+  .LoginPage #a_SignUp:hover {
     font-weight: bold;
     color: #cf102d;
   }
 
 /* modal */
 /* CSS code for popup modal */
-.modal {
+.LoginPage .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -188,7 +306,7 @@ input[type="submit"], input[type="button"] {
   transition: all 0.3s ease-out;
 }
 
-.modal-container {
+.LoginPage .modal-container {
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -202,23 +320,23 @@ input[type="submit"], input[type="button"] {
     transition: all 0.3s ease-out;
 } 
 
-.modal.show {
+.LoginPage .modal.show {
   display: block;
 }
 
-.modal.show .modal-container {
+.LoginPage .modal.show .modal-container {
   transform: translate(-50%, -50%);
 }
 
 
-.modal-container.fade-out {
+.LoginPage .modal-container.fade-out {
   transform: translate(-50%, -200%);
   opacity: 0;
   transition: all 0.3s ease-out;
 }
 
 /* Style the close button */
-.close {
+.LoginPage .close {
   color: #aaaaaa;
   margin-right: 10px;
   float: right;
@@ -226,19 +344,19 @@ input[type="submit"], input[type="button"] {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.LoginPage .close:hover,
+.LoginPage .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-.modal-container form label {
+.LoginPage .modal-container form label {
 margin-top: 15px;
 display: block;
 }
 
-.modal-container h2 {
+.LoginPage .modal-container h2 {
   text-align: center;
   background-color: #cf102d;
   color: white;
@@ -247,7 +365,7 @@ display: block;
   padding: 20px
 }
 
-.modal-container #submit-password {
+.LoginPage .modal-container #submit-password {
   display: block;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -261,7 +379,7 @@ display: block;
   transition: all 0.3s ease;
 }
 
-.modal-container #submit-password:hover {
+.LoginPage .modal-container #submit-password:hover {
   display: block;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -277,14 +395,17 @@ display: block;
 }
 
 
-.modal-container form input[type=password],  .modal-container form input[type=text]
-,  .modal-container form input[type=email]{
+.LoginPage .modal-container form input[type=password],  
+.LoginPage .modal-container form input[type=text], 
+.LoginPage .modal-container form input[type=email]{
   display: block;
   width: 100%;
 }
 
-.modal-container .oldPasswordInput, .modal-container .passwordInput, 
-.modal-container #confirmPasswordInput, .modal-container #userEmailAddressInput  {
+.LoginPage .modal-container .oldPasswordInput, 
+.LoginPage .modal-container .passwordInput, 
+.LoginPage .modal-container #confirmPasswordInput, 
+.LoginPage .modal-container #userEmailAddressInput  {
   padding: 10px;
   height: 40px;
   border-radius: 5px;
@@ -294,14 +415,14 @@ display: block;
   background-color: white;
 }
 
-.modal-container .oldPasswordInput:focus, 
-.modal-container .passwordInput:focus, 
-.modal-container #confirmPasswordInput:focus, 
-.modal-container #userEmailAddressInput:focus, 
-.modal-container .oldPasswordInput:hover, 
-.modal-container .passwordInput:hover, 
-.modal-container #confirmPasswordInput:hover, 
-.modal-container #userEmailAddressInput:hover{
+.LoginPage .modal-container .oldPasswordInput:focus, 
+.LoginPage .modal-container .passwordInput:focus, 
+.LoginPage .modal-container #confirmPasswordInput:focus, 
+.LoginPage .modal-container #userEmailAddressInput:focus, 
+.LoginPage .modal-container .oldPasswordInput:hover, 
+.LoginPage .modal-container .passwordInput:hover, 
+.LoginPage .modal-container #confirmPasswordInput:hover, 
+.LoginPage .modal-container #userEmailAddressInput:hover{
     border-color: greenyellow; /* change the border color when input is in focus */
     outline: none; /* remove default outline */
     box-shadow: 0 0 5px greenyellow; /* add custom box-shadow when input is in focus */
@@ -310,19 +431,19 @@ display: block;
 
 
 
-.password-container {
+.LoginPage .password-container {
 display: flex;
 flex-direction: row;
 }
 
-.toggle-password {
+.LoginPage .toggle-password {
 margin-top: 12px;
 margin-left: 380px;
 position: absolute;
 cursor: pointer;
 }
 
-.toggle-password2 {
+.LoginPage .toggle-password2 {
   margin-top: 17px;
   margin-left: -30px;
   position: absolute;
@@ -330,11 +451,12 @@ cursor: pointer;
   
 }
 
-#passwordTooltip, #emailTooltip {
+.LoginPage #passwordTooltip, 
+.LoginPage #emailTooltip {
   font-size: 12px;
 }
 
-#otpVerification {
+.LoginPage #otpVerification {
   margin-top: 10px;
   height: 40px;
   border: 2px solid gray;
@@ -347,7 +469,8 @@ cursor: pointer;
 }
 
 
-#otpVerification:hover, #otpVerification:focus {
+.LoginPage #otpVerification:hover, 
+.LoginPage #otpVerification:focus {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   margin-top: 10px;
@@ -359,7 +482,7 @@ cursor: pointer;
 }
 
 
-#sendOtpLink {
+.LoginPage #sendOtpLink {
   font-size: small;
   border: solid 2px #cf102d;
   color: #cf102d;
@@ -368,7 +491,7 @@ cursor: pointer;
   font-weight: bold;
 }
 
-#sendOtpLink:hover {
+.LoginPage #sendOtpLink:hover {
   font-size: small;
   border: none;
   color: white;

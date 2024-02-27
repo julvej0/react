@@ -1,5 +1,6 @@
 import React from "react";
 import "./signup.css"
+import background from "../../assets/images/background_img.jpg"
 
 const SignUp = () => {
   return (
@@ -9,6 +10,10 @@ const SignUp = () => {
       <div id="whole_page">
         {/* <img src="../../../assets/images/redspartan_logo.png" style="width: 150px; height: 170px; position: fixed; bottom: 0; right: 0; margin-bottom: 50px; margin-right: 25px; border-radius: 50% / 20%;"> */}
         {/*--------------------------------------------------------- sign up header ------------------------------------------------------*/}
+        <img
+          id="background"
+          src={background}
+        />
         <div id="signup-container">
           <img
             src="./../../assets/images/batStateUNeu-logo.png"

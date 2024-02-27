@@ -17,16 +17,17 @@ const Login = () => {
   <img src="../../../assets/images/redspartan_logo.png" style="width: 150px; height: 160px; position: fixed; bottom: 0; right: 0; margin-bottom: 50px; margin-right: 25px; z-index: 2; border-radius: 50% / 20%;">
     </div> */}
         <img
+          className="bsuLogo"
           src={bsulogo}
           style={{
-            width: 120,
-            height: 120,
+            width: 110,
+            height: 110,
             position: "fixed",
             border: "solid 3px #cf102d",
             backgroundColor: "white",
             borderRadius: "50%",
             zIndex: 1,
-            transform: "translate(-50%, -295%)",
+            transform: "translate(-50%, -280%)",
             top: "50%",
             left: "50%",
           }}
@@ -38,7 +39,7 @@ const Login = () => {
           </div>
           <br />
           <form id="user_input" action="" method="POST">
-            <div>
+            <div className="formDiv">
               <label className="labelSubHeader">EMAIL</label>
               <input
                 id="login_email"
@@ -77,6 +78,7 @@ const Login = () => {
                     borderTop: "1px solid gray",
                   }}
                 />
+                
                 <label style={{ textAlign: "center", color: "gray" }}>OR</label>
                 <hr
                   style={{
@@ -147,7 +149,7 @@ const Login = () => {
                 maxLength={16}
                 required=""
               />
-              <i className="toggle-password fas fa-eye-slash" />
+              <FaEyeSlash className="toggle-password fas fa-eye-slash" />
             </div>
             <label htmlFor="confirm-password" className="labelSubHeader">
               Confirm Password:
