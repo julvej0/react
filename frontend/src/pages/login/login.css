@@ -43,12 +43,6 @@
   .LoginPage #login_container {
     width: 300px;
     height: 380px;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.3);
-    
   }
 }
 
@@ -298,7 +292,7 @@
 /* modal */
 /* CSS code for popup modal */
 .LoginPage .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -318,12 +312,18 @@
     background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -50%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     width: 38em;
     border-radius: 10px;
     transition: all 0.3s ease-out;
 } 
+  @media screen and (max-width: 767px){ /* phone resolution */
+    .LoginPage .modal-container {
+      width: 300px;
+      height: 380px;
+    }
+}
 
 .LoginPage .modal.show {
   display: block;
@@ -341,16 +341,8 @@
 }
 
 /* Style the close button */
-.LoginPage .close {
-  color: #aaaaaa;
-  margin-right: 10px;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.LoginPage .close:hover,
-.LoginPage .close:focus {
+.LoginPage .closes:hover,
+.LoginPage .closes:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -415,7 +407,7 @@ display: block;
   height: 40px;
   border-radius: 5px;
   border: none;
-  border: 2px solid lightgray;
+  border: 2px solid gray;
   transition: all 0.3s ease;
   background-color: white;
 }
@@ -446,7 +438,7 @@ margin-top: 12px;
 margin-left: 380px;
 position: absolute;
 cursor: pointer;
-}formDiv
+}
 
 .LoginPage .toggle-password2 {
   margin-top: 15px;
@@ -501,6 +493,8 @@ cursor: pointer;
   background-color: White;
   transition: all 0.3s ease-out;
   font-weight: bold;
+  border-bottom-left-radius: 20px; 
+  border-bottom-right-radius: 20px; 
 }
 
 .LoginPage #sendOtpLink:hover {

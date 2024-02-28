@@ -430,7 +430,7 @@
     background-color: #555555;
     z-index: 999;
     transition: ease-in-out;
-    display: flex;
+    display: none;
   }
   .tab-nav ul{
     width: 100%;

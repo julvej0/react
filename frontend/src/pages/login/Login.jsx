@@ -1,18 +1,49 @@
-import React from "react";
-import "./login.css"
-import bsulogo from "../../assets/images/batStateUNeu-logo.png"
-import background from "../../assets/images/background_img.jpg"
-import { FaEyeSlash, FaEye  } from "react-icons/fa";
-
+import React, { useState } from "react";
+import "./login.css";
+import bsulogo from "../../assets/images/batStateUNeu-logo.png";
+import background from "../../assets/images/background_img.jpg";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { IoCloseOutline } from "react-icons/io5";
 
 const Login = () => {
+  // ush for shortcut
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [type, setType] = useState("password");
+  const [type1, setType1] = useState("password");
+  const [type2, setType2] = useState("password");
+
+  function togglePassword() {
+    setIsOpen(!isOpen);
+    if (isOpen == true) {
+      setType("password");
+    } else {
+      setType("text");
+    }
+  }
+  function togglePassword1() {
+    setIsOpen1(!isOpen1);
+    if (isOpen1 == true) {
+      setType1("password");
+    } else {
+      setType1("text");
+    }
+  }
+  function togglePassword2() {
+    setIsOpen2(!isOpen2);
+    if (isOpen2 == true) {
+      setType2("password");
+    } else {
+      setType2("text");
+    }
+  }
+
   return (
     <div className="LoginPage">
       <div id="whole_page">
-        <img
-          id="background"
-          src={background}
-        />
+        <img id="background" src={background} />
         {/* <div style="width: 155px; height: 230px; background-color: white; position: fixed; bottom: 0; right: 0; margin-bottom: 20px; margin-right: 20px; z-index: 1; padding: 20px; border-radius: 50% / 20%;">
   <img src="../../../assets/images/redspartan_logo.png" style="width: 150px; height: 160px; position: fixed; bottom: 0; right: 0; margin-bottom: 50px; margin-right: 25px; z-index: 2; border-radius: 50% / 20%;">
     </div> */}
@@ -55,11 +86,23 @@ const Login = () => {
                   className="passwordInput"
                   name="password"
                   placeholder="Password"
-                  type="password"
+                  type={type}
                   minLength={8}
                   maxLength={16}
                 />
-                <FaEyeSlash size={20} className="toggle-password2 " />
+                {isOpen ? (
+                  <FaEye
+                    onClick={togglePassword}
+                    size={20}
+                    className="toggle-password2"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={togglePassword}
+                    size={20}
+                    className="toggle-password2"
+                  />
+                )}
               </div>
               <br />
               <input name="login" type="submit" defaultValue=" LOGIN " />
@@ -72,17 +115,22 @@ const Login = () => {
                 }}
               >
                 <hr
-                className="left-line"
+                  className="left-line"
                   style={{
                     flex: 1,
                     marginRight: 10,
                     borderTop: "1px solid gray",
                   }}
                 />
-                
-                <label className="or" style={{ textAlign: "center", color: "gray" }}>OR</label>
+
+                <label
+                  className="or"
+                  style={{ textAlign: "center", color: "gray" }}
+                >
+                  OR
+                </label>
                 <hr
-                className="right-line"
+                  className="right-line"
                   style={{
                     flex: 1,
                     marginLeft: 10,
@@ -90,11 +138,13 @@ const Login = () => {
                   }}
                 />
               </div>
-              <input
-                type="button"
-                onclick="window.location.href='./../signup/sign-up.php'"
-                defaultValue="SIGN UP"
-              />
+              <Link to="/signup">
+                <input
+                  type="button"
+                  onclick="window.location.href='./../signup/sign-up.php'"
+                  defaultValue="SIGN UP"
+                />
+              </Link>
               <label id="labelSignUp">
                 Forgot Password?
                 <a id="a_SignUp" onclick="showModal()">
@@ -106,11 +156,24 @@ const Login = () => {
           </form>
         </div>
       </div>
-      {/*----------------------------------------------- HTML code for change password modal --------------------------------------------*/}
+      {/*----------------------------------------------- HTML code for change password modal (forgot password) --------------------------------------------*/}
+      
       <div id="myModal" className="modal">
         <div className="modal-container">
-          <span className="close">×</span>
           <h2 id="h2pass">Change Password</h2>
+          <IoCloseOutline 
+            // onClick={}
+            className="closes"
+            size={30}
+              style={{
+                color:"white",
+                float:"right" ,
+                marginRight:"20px",
+                marginTop:"-53px",
+
+              }}
+          />
+          {/* <span className="close">×</span> */}
           <form
             id="change-password-form"
             action="sample_db/change-password.php"
@@ -144,28 +207,52 @@ const Login = () => {
             </label>
             <div className="password-container">
               <input
-                type="password"
+                type={type1}
                 className="passwordInput"
                 name="new-password"
                 minLength={8}
                 maxLength={16}
                 required=""
               />
-              <FaEyeSlash className="toggle-password fas fa-eye-slash" />
+              {isOpen1 ? (
+                  <FaEye
+                    onClick={togglePassword1}
+                    size={20}
+                    className="toggle-password"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={togglePassword1}
+                    size={20}
+                    className="toggle-password"
+                  />
+                )}
             </div>
             <label htmlFor="confirm-password" className="labelSubHeader">
               Confirm Password:
             </label>
             <div className="password-container">
               <input
-                type="password"
+                type={type2}
                 id="confirmPasswordInput"
                 name="confirm-password"
                 minLength={8}
                 maxLength={16}
                 required=""
               />
-              <FaEyeSlash size={20} className="toggle-password fas fa-eye-slash" />
+              {isOpen2 ? (
+                  <FaEye
+                    onClick={togglePassword2}
+                    size={20}
+                    className="toggle-password"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={togglePassword2}
+                    size={20}
+                    className="toggle-password"
+                  />
+                )}
             </div>
             <span
               id="passwordTooltip"

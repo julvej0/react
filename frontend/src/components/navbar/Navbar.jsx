@@ -8,7 +8,7 @@ import batstateulogo from "../../assets/images/batStateUNeu-logo.png";
 const Navbar = () => {
   function toggleNavbar() {
     const sidebar = document.querySelector(".tab-nav");
-    if (sidebar.style.display === "none") {
+    if (sidebar.style.display === "none" || sidebar.style.display === "") {
       sidebar.style.display = "flex";
     } else {
       sidebar.style.display = "none";
