@@ -17,29 +17,29 @@ import Footer from "../../../components/footer/Footer";
 // import { useState } from "react";
 
 function Home() {
-  // const [isError, setIsError] = useState(false);
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const {
-    data: publicationsData,
-    error: publicationsError,
-    isValidating: publicationsIsValidating,
-  } = useSWR(`${API}/table_publications`, fetcher);
+  // // const [isError, setIsError] = useState(false);
+  // const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  // const {
+  //   data: publicationsData,
+  //   error: publicationsError,
+  //   isValidating: publicationsIsValidating,
+  // } = useSWR(`${API}/table_publications`, fetcher);
 
-  const {
-    data: ipassetsData,
-    error: ipassetsError,
-    isValidating: ipassetsIsValidating,
-  } = useSWR(`${API}/table_ipassets`, fetcher);
+  // const {
+  //   data: ipassetsData,
+  //   error: ipassetsError,
+  //   isValidating: ipassetsIsValidating,
+  // } = useSWR(`${API}/table_ipassets`, fetcher);
 
-  if (publicationsError || ipassetsError) return <div className="Loading">Error...</div>;
-  // if (publicationsError) return <div className="Loading">Error...</div>;
-  // if (publicationsIsValidating) return <div className="Loading">Loading...</div>;
-  if (publicationsIsValidating || ipassetsIsValidating) return <div className="Loading">Loading...</div>;
+  // if (publicationsError || ipassetsError) return <div className="Loading">Error...</div>;
+  // // if (publicationsError) return <div className="Loading">Error...</div>;
+  // // if (publicationsIsValidating) return <div className="Loading">Loading...</div>;
+  // if (publicationsIsValidating || ipassetsIsValidating) return <div className="Loading">Loading...</div>;
 
-  const publications = publicationsData.table_publications;
-  const ipassets = ipassetsData.table_ipassets;
-  // const publications = [];
-  // const ipassets = [];
+  // const publications = publicationsData.table_publications;
+  // const ipassets = ipassetsData.table_ipassets;
+  const publications = [];
+  const ipassets = [];
 
   return (
     <div className="homepage">

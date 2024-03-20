@@ -14,6 +14,15 @@ const Login = () => {
   const [type, setType] = useState("password");
   const [type1, setType1] = useState("password");
   const [type2, setType2] = useState("password");
+  const [displayModal, setDisplayModal] = useState(false);
+  
+  const openModal = () => {
+    setDisplayModal(true);
+  };
+
+  const closeModal = () => {
+    setDisplayModal(false);
+  };
 
   function togglePassword() {
     setIsOpen(!isOpen);
@@ -141,13 +150,13 @@ const Login = () => {
               <Link to="/signup">
                 <input
                   type="button"
-                  onclick="window.location.href='./../signup/sign-up.php'"
+                  onClick=""// window.location.href='./../signup/sign-up.php
                   defaultValue="SIGN UP"
                 />
               </Link>
               <label id="labelSignUp">
                 Forgot Password?
-                <a id="a_SignUp" onclick="showModal()">
+                <a id="a_SignUp" onClick={openModal}>
                   &nbsp;Click Here!
                 </a>
               </label>
@@ -158,11 +167,12 @@ const Login = () => {
       </div>
       {/*----------------------------------------------- HTML code for change password modal (forgot password) --------------------------------------------*/}
       
-      <div id="myModal" className="modal">
+      <div id="myModal" className="modal" 
+      style={{ display: displayModal ? "block" : "none" }}>
         <div className="modal-container">
           <h2 id="h2pass">Change Password</h2>
           <IoCloseOutline 
-            // onClick={}
+            onClick={closeModal}
             className="closes"
             size={30}
               style={{
@@ -170,13 +180,12 @@ const Login = () => {
                 float:"right" ,
                 marginRight:"20px",
                 marginTop:"-53px",
-
               }}
           />
           {/* <span className="close">×</span> */}
           <form
             id="change-password-form"
-            action="sample_db/change-password.php"
+            action="" // sample_db/change-password.php
             method="POST"
           >
             <label htmlFor="current-password" className="labelSubHeader">

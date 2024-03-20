@@ -9,7 +9,7 @@ const ForgotPassword = () => {
         <h2 id="h2pass">Change Password</h2>
         <form
           id="change-password-form"
-          action="sample_db/change-password.php"
+          action="" // sample_db/change-password.php
           method="POST"
         >
           <label htmlFor="current-password" className="labelSubHeader">

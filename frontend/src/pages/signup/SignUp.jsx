@@ -40,7 +40,7 @@ const SignUp = () => {
           {/*--------------------------------------------------------- sign-up content -----------------------------------------------------*/}
           <form
             id="user_input"
-            action="sample_db/create-account.php"
+            action="" // sample_db/create-account.php
             method="POST"
           >
             <div></div>
@@ -126,7 +126,7 @@ const SignUp = () => {
             <br />
             <label id="labelSignUp">
               Already have an account?
-              <a id="a_SignUp" href="../login/login.php">
+              <a id="a_SignUp" href="">
                 &nbsp;Sign In
               </a>
             </label>
@@ -140,7 +140,7 @@ const SignUp = () => {
               </div>
               <form
                 id="form-container"
-                action="email_ver/page/sendcode.php"
+                action="" // email_ver/page/sendcode.php
                 method="POST"
               >
                 <span className="close">×</span>

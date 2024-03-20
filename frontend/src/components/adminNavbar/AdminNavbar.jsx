@@ -24,7 +24,7 @@ const AdminNavbar = () => {
       <ul className="side-menu">
         <li>
           <a
-            href="../../../views/admin/dashboard/dashboard.php"
+            // href="../../../views/admin/dashboard/dashboard.php"
             id="dashboard-link"
             onclick="showLoadingScreen()"
           >
@@ -37,7 +37,7 @@ const AdminNavbar = () => {
         </li>
         <li>
           <a
-            href="../../../views/admin/publications/publications.php"
+            // href="../../../views/admin/publications/publications.php"
             id="publication-link"
             onclick="showLoadingScreen()"
           >
@@ -47,7 +47,7 @@ const AdminNavbar = () => {
         </li>
         <li>
           <a
-            href="../../../views/admin/ip-assets/ip-assets.php"
+            // href="../../../views/admin/ip-assets/ip-assets.php"
             id="ip-assets-link"
             onclick="showLoadingScreen()"
           >
@@ -57,7 +57,7 @@ const AdminNavbar = () => {
         </li>
         <li>
           <a
-            href="../../../views/admin/authors/authors.php"
+            // href="../../../views/admin/authors/authors.php"
             id="author-link"
             onclick="showLoadingScreen()"
           >
@@ -67,7 +67,7 @@ const AdminNavbar = () => {
         </li>
         <li>
           <a
-            href="../../../views/admin/user-accounts/user-accounts.php"
+            // href="../../../views/admin/user-accounts/user-accounts.php"
             id="user-accounts-link"
             onclick="showLoadingScreen()"
           >
@@ -80,7 +80,7 @@ const AdminNavbar = () => {
         </li>
         <li>
           <a
-            href="../../../views/admin/logs/logs.php"
+            // href="../../../views/admin/logs/logs.php"
             id="log-link"
             onclick="showLoadingScreen()"
           >
@@ -97,7 +97,7 @@ const AdminNavbar = () => {
           <ul className="side-dropdown">
             <li>
               <a
-                href="../../../views/admin/account-management/user-profile.php"
+                // href="../../../views/admin/account-management/user-profile.php"
                 id="user-link"
                 onclick="showLoadingScreen()"
               >
@@ -106,7 +106,7 @@ const AdminNavbar = () => {
             </li>
             <li>
               <a
-                href="../../../views/admin/account-management/change-password.php"
+                // href="../../../views/admin/account-management/change-password.php"
                 id="security-link"
                 onclick="showLoadingScreen()"
               >
