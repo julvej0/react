@@ -13,7 +13,7 @@ import Navbar from "./components/navbar/Navbar";
 import Nav from "./components/navbar/Nav";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import Login from "./pages/login/Login";
-import ForgotPassword from "./pages/login/ForgotPassword";
+// import ForgotPassword from "./pages/login/ForgotPassword";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
+          {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
           <Route path="/admin/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>

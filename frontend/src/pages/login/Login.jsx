@@ -180,6 +180,7 @@ const Login = () => {
                 float:"right" ,
                 marginRight:"20px",
                 marginTop:"-53px",
+                cursor: "pointer"
               }}
           />
           {/* <span className="close">×</span> */}
@@ -188,7 +189,7 @@ const Login = () => {
             action="" // sample_db/change-password.php
             method="POST"
           >
-            <label htmlFor="current-password" className="labelSubHeader">
+            <label htmlFor="current-password" className="labelSubHeader2">
               Email:
             </label>
             <div className="password-container">
@@ -211,10 +212,10 @@ const Login = () => {
               SEND OTP
             </button>
             <span id="emailTooltip" style={{ display: "none", color: "red" }} />
-            <label htmlFor="new-password" className="labelSubHeader">
+            <label htmlFor="new-password" className="labelSubHeader3">
               New Password:
             </label>
-            <div className="password-container">
+            <div className="password-container2">
               <input
                 type={type1}
                 className="passwordInput"
@@ -237,10 +238,10 @@ const Login = () => {
                   />
                 )}
             </div>
-            <label htmlFor="confirm-password" className="labelSubHeader">
+            <label htmlFor="confirm-password" className="labelSubHeader4">
               Confirm Password:
             </label>
-            <div className="password-container">
+            <div className="password-container2">
               <input
                 type={type2}
                 id="confirmPasswordInput"

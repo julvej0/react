@@ -82,7 +82,7 @@
 }
 
 .LoginPage #h2pass {
-  color: whitef;
+  color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -133,6 +133,7 @@
   color: gray;
   margin-bottom: 2px;
 }
+
 @media screen and (max-width: 767px) {
   /* phone resolution */
   .formDiv {
@@ -143,7 +144,7 @@
     padding: 0;
   }
 
-  .LoginPage .labelSubHeader {
+  .labelSubHeader {
     font-size: 0.6rem;
     font-weight: bold;
     color: gray;
@@ -279,9 +280,9 @@ input[type="button"]:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.3s ease-out;
-    /* height: 20px; */
     font-size: x-small;
     margin-bottom: -10px;
+    text-transform: uppercase;
   }
   .LoginPage input[type="submit"]:hover,
   input[type="button"]:hover {
@@ -312,6 +313,17 @@ input[type="button"]:hover {
   transition: all 0.3s ease-out;
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+}
+
 .LoginPage .modal-container {
   align-items: center;
   justify-content: center;
@@ -324,6 +336,35 @@ input[type="button"]:hover {
   width: 38em;
   border-radius: 10px;
   transition: all 0.3s ease-out;
+}
+@media screen and (max-width: 767px) {
+  /* phone resolution */
+  .LoginPage .modal-container {
+    width: 300px;
+    height: 380px;
+  }
+}
+
+.LoginPage .labelSubHeader2,
+.LoginPage .labelSubHeader3,
+.LoginPage .labelSubHeader4 {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  /* phone resolution */
+  .labelSubHeader2 {
+    margin-left: 30px;
+  }
+  .labelSubHeader3 {
+      margin-left: 30px;
+  }
+  .labelSubHeader4 {
+      margin: 0px 30px 0px 30px;
+  }
 }
 
 .LoginPage .modal.show {
@@ -341,18 +382,17 @@ input[type="button"]:hover {
 }
 
 /* Style the close button */
-.LoginPage .closes:hover,
-.LoginPage .closes:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+
+@media screen and (max-width: 767px) {
+  .LoginPage .closes {
+    margin-top: 10px;
+  }
 }
 
 .LoginPage .modal-container form label {
   margin-top: 15px;
   display: block;
 }
-
 .LoginPage .modal-container h2 {
   text-align: center;
   background-color: #cf102d;
@@ -360,6 +400,12 @@ input[type="button"]:hover {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   padding: 20px;
+}
+@media screen and (max-width: 767px) {
+  /* phone resolution */
+  .LoginPage .modal-container h2 {
+    font-size: small;
+  }
 }
 
 .LoginPage .modal-container #submit-password {
@@ -376,33 +422,6 @@ input[type="button"]:hover {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 767px) {
-  /* phone resolution */
-  .LoginPage .modal-container {
-    width: 300px;
-    height: 380px;
-  }
-  .LoginPage .modal-container form label {
-    margin-top: 5px;
-  }
-  .LoginPage .modal-container h2 {
-    font-size: small;
-  }
-  .LoginPage .modal-container #submit-password {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 300px;
-    height: 40px;
-    background-color: #cf102d;
-    color: white;
-    border: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-}
-
 .LoginPage .modal-container #submit-password:hover {
   display: block;
   margin-top: 20px;
@@ -416,7 +435,40 @@ input[type="button"]:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   border-radius: 5px;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .LoginPage .modal-container #submit-password {
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+    font-size: x-small;
+    width: 100px;
+    margin: 10px auto 0;
+    /* margin: px; */
+    text-transform: uppercase;
+  }
+  
+  .LoginPage .modal-container #submit-password:hover {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    background-color: #cf102d;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+
 
 .LoginPage .modal-container form input[type="password"],
 .LoginPage .modal-container form input[type="text"],
@@ -424,6 +476,20 @@ input[type="button"]:hover {
   display: block;
   width: 100%;
 }
+
+.LoginPage .modal-container .oldPasswordInput,
+.LoginPage .modal-container .passwordInput,
+.LoginPage .modal-container #confirmPasswordInput,
+.LoginPage .modal-container #userEmailAddressInput {
+  padding: 10px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid gray;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
 @media screen and (max-width: 767px) {
   /* phone resolution */
   .LoginPage .modal-container form input[type="password"],
@@ -435,34 +501,25 @@ input[type="button"]:hover {
     justify-content: center;
     align-items: center;
   }
+  
   .LoginPage .modal-container .oldPasswordInput,
   .LoginPage .modal-container .passwordInput,
   .LoginPage .modal-container #confirmPasswordInput,
   .LoginPage .modal-container #userEmailAddressInput {
-    padding: 100px;
-    height: 400px;
+    padding: 10px;
+    height: 30px;
     border-radius: 5px;
     border: none;
     border: 2px solid gray;
     transition: all 0.3s ease;
     background-color: white;
+    font-size: 10px;
   }
-
-}
-.LoginPage .modal-container .oldPasswordInput,
-.LoginPage .modal-container .passwordInput,
-.LoginPage .modal-container #confirmPasswordInput,
-.LoginPage .modal-container #userEmailAddressInput {
-  padding: 10px;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
-  border: 2px solid gray;
-  transition: all 0.3s ease;
-  background-color: white;
 }
 
-.LoginPage .modal-container .oldPasswordInput:focus,
+
+
+/* .LoginPage .modal-container .oldPasswordInput:focus,
 .LoginPage .modal-container .passwordInput:focus,
 .LoginPage .modal-container #confirmPasswordInput:focus,
 .LoginPage .modal-container #userEmailAddressInput:focus,
@@ -470,15 +527,30 @@ input[type="button"]:hover {
 .LoginPage .modal-container .passwordInput:hover,
 .LoginPage .modal-container #confirmPasswordInput:hover,
 .LoginPage .modal-container #userEmailAddressInput:hover {
-  border-color: greenyellow; /* change the border color when input is in focus */
-  outline: none; /* remove default outline */
-  box-shadow: 0 0 5px greenyellow; /* add custom box-shadow when input is in focus */
+  border-color: greenyellow; 
+  outline: none; 
+  box-shadow: 0 0 5px greenyellow; 
   transition: all 0.3s ease;
-}
+} */
 
-.LoginPage .password-container {
+.LoginPage .password-container, 
+.LoginPage .password-container2 {
   display: flex;
   flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  .LoginPage .password-container {
+    margin: 0px 2px 0px 2px;
+    display: flex;
+    justify-content: center;
+  }
+  .LoginPage .password-container2{
+    margin: 0px 2px 10px 2px;
+    display: flex;
+    justify-content: center;
+
+  }
 }
 
 .LoginPage .toggle-password {
@@ -496,6 +568,14 @@ input[type="button"]:hover {
 }
 @media screen and (max-width: 767px) {
   /* phone resolution */
+  .LoginPage .toggle-password {
+    margin-top: 10px;
+    margin-left: 200px;
+    height: 12px;
+    position: absolute;
+    cursor: pointer;
+  }
+  
   .LoginPage .toggle-password2 {
     margin-top: 14px;
     height: 12px;
@@ -504,6 +584,7 @@ input[type="button"]:hover {
     cursor: pointer;
   }
 }
+
 .LoginPage #passwordTooltip,
 .LoginPage #emailTooltip {
   font-size: 12px;
@@ -521,16 +602,13 @@ input[type="button"]:hover {
   color: #cf102d;
 }
 
-.LoginPage #otpVerification:hover,
 .LoginPage #otpVerification:focus {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   margin-top: 10px;
-  height: 40px;
   border: 2px solid greenyellow;
   background-color: lightgray;
   padding-left: 10px;
-  padding-right: 10px;
 }
 
 .LoginPage #sendOtpLink {
@@ -553,3 +631,49 @@ input[type="button"]:hover {
   transition: all 0.3s ease-out;
   font-weight: bold;
 }
+
+
+@media screen and (max-width: 767px) {
+
+  .LoginPage #otpVerification {
+    margin: 10px auto 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #cf102d;
+    font-size: x-small;
+  }
+  .LoginPage #otpVerification:focus {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid greenyellow;
+    background-color: lightgray;
+    padding-left: 10px;
+  }
+
+  .LoginPage #sendOtpLink {
+    font-size: x-small;
+    margin-left: 30px;
+    width: 240px;
+  }
+  .LoginPage #sendOtpLink:hover {
+    font-size: x-small;
+    
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
