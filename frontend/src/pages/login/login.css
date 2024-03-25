@@ -447,24 +447,18 @@ input[type="button"]:hover {
     font-size: x-small;
     width: 100px;
     margin: 10px auto 0;
-    /* margin: px; */
     text-transform: uppercase;
   }
   
   .LoginPage .modal-container #submit-password:hover {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 40px;
-    background-color: #cf102d;
-    color: white;
-    opacity: 0.5;
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
     border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+    font-size: x-small;
+    width: 100px;
+    margin: 10px auto 0;
+    text-transform: uppercase;
   }
 }
 
