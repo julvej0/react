@@ -4,6 +4,7 @@ import { AdminNavbar } from "../../../components";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Dashboard = () => {
+  
   return (
     <div className="DashboardPage">
       <nav>
