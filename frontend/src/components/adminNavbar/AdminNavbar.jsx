@@ -9,28 +9,28 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import bsulogo2 from "../../assets/images/batStateUNeu-logo.png"
 
 const AdminNavbar = () => {
-  const navBtns = document.querySelectorAll('main .routes .nav-button');
-  const subpage = document.querySelectorAll('main .sub-page');
+  // const navBtns = document.querySelectorAll('main .routes .nav-button');
+  // const subpage = document.querySelectorAll('main .sub-page');
 
-    navBtns.forEach(navlinks => {
-        navlinks.addEventListener('click', (e) => {
-            e.preventDefault();
-            navBtns.forEach(b => {
-                b.classList.remove('focused');
-            })
-            subpage.forEach(page => {
-                page.classList.remove('active');
-            })
+  //   navBtns.forEach(navlinks => {
+  //       navlinks.addEventListener('click', (e) => {
+  //           e.preventDefault();
+  //           navBtns.forEach(b => {
+  //               b.classList.remove('focused');
+  //           })
+  //           subpage.forEach(page => {
+  //               page.classList.remove('active');
+  //           })
 
-            const target = navlinks.dataset.target;
-            document.querySelector(target).classList.add('active');
+  //           const target = navlinks.dataset.target;
+  //           document.querySelector(target).classList.add('active');
 
-            navlinks.classList.toggle('focused')
-        })
-    })
+  //           navlinks.classList.toggle('focused')
+  //       })
+  //   })
 
-    document.querySelector('#pb-page').classList.add('active');
-    document.querySelector('.nav-button[data-target="#pb-page"]').classList.add('focused');
+  //   document.querySelector('#pb-page').classList.add('active');
+  //   document.querySelector('.nav-button[data-target="#pb-page"]').classList.add('focused');
 
   return (
     <div className="AdminNavbarPage">
@@ -45,6 +45,7 @@ const AdminNavbar = () => {
         <div className="loading-spinner" />
       </div>
       <ul className="side-menu">
+
         <li>
           <a
             // href="../../../views/admin/dashboard/dashboard.php"
@@ -55,6 +56,13 @@ const AdminNavbar = () => {
             Dashboard
           </a>
         </li>
+
+        {/* <li>
+          <Link to="/admin/dashboard" id="dashboard-link">
+            Dashboard <MdOutlineDashboard className="bx bxs-dashboard icon" />
+          </Link>
+        </li> */}
+
         <li className="divider" data-text="Main">
           Main
         </li>
