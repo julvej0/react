@@ -11,6 +11,10 @@ body {
   background: var(--grey);
 }
 
+.togglebtn:hover {
+  cursor: pointer;
+}
+
 /* SIDEBAR */
 #sidebar {
   position: fixed;
@@ -138,8 +142,8 @@ display: none;
 
 .AdminNavbarPage #sidebar .side-dropdown {
   padding-left: 54px;
-  max-height: 0;
-  overflow: hidden;
+  /* max-height: 0; */
+  /* overflow: hidden; */
   transition: all .15s ease;
 }
 
@@ -227,6 +231,7 @@ display: none;
   border-radius: 50%;
   animation: spin 2s linear infinite;
 }
+
 
 
 @keyframes spin {
