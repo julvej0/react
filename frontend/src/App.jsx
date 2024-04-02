@@ -8,12 +8,10 @@ import {
   SignUp,
   UserProfile,
 } from "../src/pages/public-user";
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
-import Nav from "./components/navbar/Nav";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import Login from "./pages/login/Login";
-// import ForgotPassword from "./pages/login/ForgotPassword";
+import AdminPublications from "./pages/admin/publications/AdminPublications";
+import AdminIPassets from "./pages/admin/ipassets/AdminIPassets";
 
 function App() {
   return (
@@ -28,8 +26,10 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+
           <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/publications" element={<AdminPublications />} />
+          <Route path="/admin/ipassets" element={<AdminIPassets />} />
         </Routes>
       </Router>
     </>

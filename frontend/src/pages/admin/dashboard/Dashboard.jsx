@@ -4,9 +4,7 @@ import { AdminNavbar } from "../../../components";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Dashboard = () => {
-
-
-  const [activeButton, setActiveButton] = useState('ipa-page');
+  const [activeButton, setActiveButton] = useState("ipa-page");
   const handleButtonClick = (target) => {
     setActiveButton(target);
   };
@@ -26,9 +24,9 @@ const Dashboard = () => {
           <small>Admin</small>
         </div>
       </nav>
-    
+
       <AdminNavbar />
-          {/* <div id="loading-screen">
+      {/* <div id="loading-screen">
           <div className="loading-img">
             <img src="../../../assets/images/redspartan_logo.png" alt="redSpartan" />
           </div>
@@ -39,17 +37,28 @@ const Dashboard = () => {
           <div className="header">
             <h1 className="title">Dashboard</h1>
             <div className="routes">
-              <a className={`nav-button ${activeButton === 'pb-page' ? 'focused' : ''}`}
-                  onClick={() => handleButtonClick('pb-page')}>
+              <a
+                className={`nav-button ${
+                  activeButton === "pb-page" ? "focused" : ""
+                }`}
+                onClick={() => handleButtonClick("pb-page")}
+              >
                 <span>Publications</span>
               </a>
-              <a className={`nav-button ${activeButton === 'ipa-page' ? 'focused' : ''}`}
-                  onClick={() => handleButtonClick('ipa-page')}>
+              <a
+                className={`nav-button ${
+                  activeButton === "ipa-page" ? "focused" : ""
+                }`}
+                onClick={() => handleButtonClick("ipa-page")}
+              >
                 <span>IP assets</span>
               </a>
             </div>
           </div>
-          <section id="pb-page" className={`sub-page ${activeButton === 'pb-page' ? 'active' : ''}`}>
+          <section
+            id="pb-page"
+            className={`sub-page ${activeButton === "pb-page" ? "active" : ""}`}
+          >
             <div className="content-data">
               <div className="content-card">
                 <div className="head">
@@ -156,7 +165,12 @@ const Dashboard = () => {
             </div>
           </section>
           {/* IP-assets */}
-          <section id="ipa-page" className={`sub-page ${activeButton === 'ipa-page' ? 'active' : ''}`}>
+          <section
+            id="ipa-page"
+            className={`sub-page ${
+              activeButton === "ipa-page" ? "active" : ""
+            }`}
+          >
             <div className="content-data">
               <div className="content-card">
                 <div className="head">
