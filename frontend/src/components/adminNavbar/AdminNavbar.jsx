@@ -40,7 +40,7 @@ const AdminNavbar = () => {
               to="/admin/dashboard"
               id="dashboard-link"
               className={path.includes("dashboard") ? "active" : ""}
-              onclick="showLoadingScreen()"
+              onClick="showLoadingScreen()"
             >
               <MdOutlineDashboard className="bx bxs-dashboard icon" />
               Dashboard
@@ -55,7 +55,7 @@ const AdminNavbar = () => {
               to="/admin/publications"
               id="publication-link"
               className={path.includes("publications") ? "active" : ""}
-              onclick="showLoadingScreen()"
+              onClick="showLoadingScreen()"
             >
               <MdOutlineMenuBook className="bx bxs-book-open icon" />
               Publications
@@ -63,11 +63,10 @@ const AdminNavbar = () => {
           </li>
           <li className="togglebtn">
             <Link
+              to="/admin/ipassets"
               id="ip-assets-link"
-              className={`${
-                path.includes("ip-assets") ? "active" : ""
-              } togglebtn`}
-              onclick="showLoadingScreen()"
+              className={path.includes("ipassets") ? "active" : ""} 
+              onClick="showLoadingScreen()"
             >
               <MdOutlineFolder className="bx bxs-folder icon" />
               IP Assets
@@ -75,7 +74,7 @@ const AdminNavbar = () => {
           </li>
           <li>
             <a
-              // href="../../../views/admin/authors/authors.php"
+              to="/admin/authors"
               id="author-link"
               className={path.includes("authors") ? "active" : ""}
               onclick="showLoadingScreen()"
@@ -86,10 +85,10 @@ const AdminNavbar = () => {
           </li>
           <li>
             <Link
-              // href="../../../views/admin/user-accounts/user-accounts.php"
+              to="/admin/useraccounts"
               id="user-accounts-link"
               className={path.includes("user-accounts") ? "active" : ""}
-              onclick="showLoadingScreen()"
+              onClick="showLoadingScreen()"
             >
               <FaRegUser className="bx bxs-user icon" />
               User Accounts
@@ -100,10 +99,10 @@ const AdminNavbar = () => {
           </li>
           <li>
             <Link
-              // href="../../../views/admin/logs/logs.php"
+              to="/admin/logs"
               id="log-link"
               className={path.includes("logs") ? "active" : ""}
-              onclick="showLoadingScreen()"
+              onClick="showLoadingScreen()"
             >
               <IoLogInOutline className="bx bxs-log-in icon" />
               Logs
@@ -123,7 +122,7 @@ const AdminNavbar = () => {
                     // to="../../../views/admin/account-management/user-profile.php"
                     className={path.includes("authors") ? "active" : ""}
                     id="user-link"
-                    onclick="showLoadingScreen()"
+                    onClick="showLoadingScreen()"
                   >
                     Profile
                   </Link>
@@ -132,7 +131,7 @@ const AdminNavbar = () => {
                   <Link
                     // to="../../../views/admin/account-management/change-password.php"
                     id="security-link"
-                    onclick="showLoadingScreen()"
+                    onClick="showLoadingScreen()"
                   >
                     Change Password
                   </Link>
@@ -142,7 +141,7 @@ const AdminNavbar = () => {
           </li>
 
           <li>
-            <a className="logout" onclick="return showLogoutAlert()">
+            <a className="logout" onClick="return showLogoutAlert()">
               <CiLogout className="bx bx-log-out icon rotate" name="logout" />
               Sign Out
             </a>

@@ -1,11 +1,20 @@
-main .header {
+.AdminPubPage {
+  width: 100%;
+  padding-left: 270px;
+  overflow-x: hidden;
+}
+
+.AdminPubPage .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-  
-  main .header .left .addBtn {
+  .topnavadmin {
+    padding: 0;
+    margin: 0;
+  }
+  .AdminPubPage .header .left .addBtn {
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -28,16 +37,16 @@ main .header {
     width: 100px;
   }
   
-  main .header .addBtn .icon {
+  .AdminPubPage .header .addBtn .icon {
     font-size: 20px;
     transition: all 0.5s ease;
   }
   
-  main .header .addBtn:hover {
+  .AdminPubPage .header .addBtn:hover {
     opacity: 50%;
   }
   
-  main .header .left {
+  .AdminPubPage .header .left {
     display: flex;
     width: 1000px;
     align-items: center;
@@ -46,7 +55,7 @@ main .header {
     flex-wrap: wrap;
   }
   
-  .dropbtn {
+  .AdminPubPage .dropbtn {
     background-color: #4caf50;
     color: white;
     padding: 16px;
@@ -55,13 +64,13 @@ main .header {
     cursor: pointer;
   }
   
-  .filter_dd {
+  .AdminPubPage .filter_dd {
     position: relative;
     display: inline-block;
   }
   
-  .dropdown-content {
-    display: none;
+  .AdminPubPage .dropdown-content {
+    display: grid;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -69,26 +78,26 @@ main .header {
     z-index: 1;
   }
   
-  .dropdown-content a {
+  .AdminPubPage .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown-content a:hover {
+  .AdminPubPage .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
   
-  .filter_dd:hover .dropdown-content {
+  .AdminPubPage .filter_dd:hover .dropdown-content {
     display: block;
   }
   
-  .filter_dd:hover .dropbtn {
+  .AdminPubPage .filter_dd:hover .dropbtn {
     background-color: #3e8e41;
   }
   
-  main .header .left .filter button {
+  .AdminPubPage .header .left .filter button {
     height: auto;
     min-width: 130px;
     padding: 10px;
@@ -104,19 +113,19 @@ main .header {
     color: var(--text-color);
   }
   
-  main .header .left .filter {
+  .AdminPubPage .header .left .filter {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  main .header .filter {
+  .AdminPubPage .header .filter {
     position: relative;
     display: inline-block;
   }
   
-  main .header .filter .filter-link {
+  .AdminPubPage .header .filter .filter-link {
     position: absolute;
     top: calc(100% - 10px);
     right: 0;
@@ -132,7 +141,7 @@ main .header {
     list-style-type: none;
   }
   
-  main .header .filter .filter-link.show {
+  .AdminPubPage .header .filter .filter-link.show {
     top: calc(100%);
     opacity: 1;
     pointer-events: visible;
@@ -140,7 +149,7 @@ main .header {
     margin-top: 5px;
   }
   
-  main .header .filter .filter-link a {
+  .AdminPubPage .header .filter .filter-link a {
     text-decoration: none;
     display: block;
     padding: 6px 16px;
@@ -149,24 +158,24 @@ main .header {
     transition: all 0.3s ease;
   }
   
-  main .header .filter .filter-link a:hover {
+  .AdminPubPage .header .filter .filter-link a:hover {
     background: var(--grey);
   }
   
-  main .header .left .filter button .icon {
+  .AdminPubPage .header .left .filter button .icon {
     font-size: 18px;
   }
   
-  main .header .left form {
+  .AdminPubPage .header .left form {
     max-width: 400px;
     width: 100%;
   }
   
-  main .header .left .form-group {
+  .AdminPubPage .header .left .form-group {
     position: relative;
   }
   
-  main .header .left .form-group input {
+  .AdminPubPage .header .left .form-group input {
     width: 100%;
     height: 100%;
     background: var(--light);
@@ -178,7 +187,7 @@ main .header {
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   }
   
-  main .left .form-group .icon {
+  .AdminPubPage .left .form-group .icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -186,11 +195,11 @@ main .header {
     color: var(--dark-grey);
   }
   
-  main .header .form-group input:focus {
+  .AdminPubPage .header .form-group input:focus {
     box-shadow: 0 0 0 4px var(--light-blue);
   }
   
-  main .table-container {
+  .AdminPubPage .table-container {
     margin-top: 20px;
     height: calc(100vh - 250px);
     overflow: auto;
@@ -200,25 +209,25 @@ main .header {
     overflow-x: scroll;
   }
   
-  main .table-container table {
+  .AdminPubPage .table-container table {
     width: 100%;
     table-layout: auto;
     min-width: 1000px;
     border-collapse: collapse;
   }
   
-  main .table-container table,
-  th,
-  td {
+  .AdminPubPage .table-container table,
+  .AdminPubPage th,
+  .AdminPubPage td {
     border-collapse: collapse;
     border-bottom: 2.5px solid var(--grey);
   }
   
-  main table thead tr {
+  .AdminPubPage table thead tr {
     background: var(--light);
   }
   
-  main table thead tr th {
+  .AdminPubPage table thead tr th {
     position: sticky;
     top: 0;
     min-width: 150px;
@@ -231,7 +240,7 @@ main .header {
     box-shadow: inset 0px -10px 10px -10px rgba(0, 0, 0, 0.1);
   }
   
-  main table tbody td {
+  .AdminPubPage table tbody td {
     font-size: 11px;
     top: 0;
     max-width: 200px;
@@ -241,7 +250,7 @@ main .header {
     min-height: 180px;
   }
   
-  main section .table-footer {
+  .AdminPubPage section .table-footer {
     height: 80px;
     width: 100%;
     background: var(--light);
@@ -252,7 +261,7 @@ main .header {
     border-top: 1px solid var(--grey);
   }
   
-  /* main section .table-footer {
+  /* .AdminPubPage section .table-footer {
       position: fixed; 
       bottom: 0;  
       left: 0; 
@@ -266,12 +275,12 @@ main .header {
       border-top: 1px solid var(--grey); 
     } */
   
-  main section .table-footer p {
+  .AdminPubPage.AdminPubPage section .table-footer p {
     font-size: 15px;
     font-weight: 500;
   }
   
-  main table .stickey-col {
+  .AdminPubPage.AdminPubPage table .stickey-col {
     position: sticky;
     top: 0;
     left: 0;
@@ -288,7 +297,7 @@ main .header {
     background: var(--grey);
   }
   
-  main table .stickey-col-header {
+  .AdminPubPage table .stickey-col-header {
     position: sticky;
     top: 0;
     left: 0;
@@ -299,7 +308,7 @@ main .header {
     box-shadow: inset 0px -10px 10px -10px rgba(0, 0, 0, 0.1);
   }
   
-  main table .pb-action-btns {
+  .AdminPubPage table .pb-action-btns {
     display: flex;
     gap: 7px;
     flex-direction: column;
@@ -307,9 +316,9 @@ main .header {
     align-items: center;
   }
   
-  main table .edit-btn,
-  .delete-btn,
-  .gdrive-btn {
+  .AdminPubPage table .edit-btn,
+  .AdminPubPage .delete-btn,
+  .AdminPubPage .gdrive-btn {
     border: none;
     color: var(--light);
     height: 30px;
@@ -323,27 +332,27 @@ main .header {
     text-align: center;
   }
   
-  .edit-btn:hover,
-  .delete-btn:hover,
-  .gdrive-btn:hover {
+  .AdminPubPage .edit-btn:hover,
+  .AdminPubPage .delete-btn:hover,
+  .AdminPubPage .gdrive-btn:hover {
     opacity: 80%;
   }
   
-  .gdrive-btn {
+  .AdminPubPage .gdrive-btn {
     background-color: var(--green);
   }
-  .edit-btn {
+  .AdminPubPage .edit-btn {
     background-color: var(--blue);
   }
   
-  .delete-btn {
+  .AdminPubPage .delete-btn {
     background-color: var(--danger);
   }
   main table tr td .icon {
     font-size: 10px;
   }
   
-  .table-footer .pagination {
+  .AdminPubPage .table-footer .pagination {
     height: 100%;
     width: 300px;
     display: flex;
@@ -353,7 +362,7 @@ main .header {
     grid-gap: 5px;
   }
   
-  .table-footer .pagination li a {
+  .AdminPubPage .table-footer .pagination li a {
     padding: 10px;
     cursor: pointer;
     display: flex;
@@ -367,11 +376,11 @@ main .header {
     background: var(--light);
   }
   
-  .table-footer .pagination li a:hover {
+  .AdminPubPage .table-footer .pagination li a:hover {
     background: var(--grey);
   }
   
-  .table-footer .pagination li .current-page {
+  .AdminPubPage .table-footer .pagination li .current-page {
     font-size: 16px;
     font-weight: 600;
     border: 1px solid var(--dark);
@@ -382,12 +391,12 @@ main .header {
     cursor: text;
   }
   
-  .table-footer .pagination li a .icon {
+  .AdminPubPage .table-footer .pagination li a .icon {
     font-size: 20px;
   }
   
   /*SELECT COLUMN*/
-  .select-columns-btn {
+  .AdminPubPage .select-columns-btn {
     border: none;
     height: 2.4rem;
     width: 2.4rem;
@@ -400,10 +409,10 @@ main .header {
     transition: 0.3s ease-in-out;
     text-align: center;
   }
-  .checkbox-button {
+  .AdminPubPage .checkbox-button {
     width: 10.8%;
   }
-  #checkbox-container {
+  .AdminPubPage #checkbox-container {
     position: absolute;
     padding: 0.5rem 0rem 0.5rem 0rem;
     border-radius: 5px;
@@ -413,16 +422,16 @@ main .header {
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
     display: none;
   }
-  .btn-container {
+  .AdminPubPage .btn-container {
     position: relative;
     z-index: 101;
   }
   /*COLUMN*/
-  input[type="checkbox"] {
+  .AdminPubPage input[type="checkbox"] {
     display: none;
   }
   
-  label.checkbox-button {
+  .AdminPubPage label.checkbox-button {
     width: 12.85rem;
     display: inline-block;
     padding: 6px 12px;
@@ -432,31 +441,31 @@ main .header {
     text-align: left;
   }
   
-  label.checkbox-button:hover {
+  .AdminPubPage label.checkbox-button:hover {
     color: var(--dark);
     background: var(--grey);
   }
   
-  input[type="checkbox"]:checked + label.checkbox-button {
+  .AdminPubPage input[type="checkbox"]:checked + label.checkbox-button {
     color: var(--dark);
     border-left: 3px solid var(--primary);
     border-bottom: 3px solid var(--light);
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
     background: var(--grey);
   }
-  input[type="checkbox"]:checked + label.checkbox-button:hover {
+  .AdminPubPage input[type="checkbox"]:checked + label.checkbox-button:hover {
     color: var(--dark);
     background: var(--light);
   }
   
-  main .table-footer .download {
+  .AdminPubPage .table-footer .download {
     display: flex;
     justify-content: center;
     align-items: center;
     /* position: fixed; */
   }
   
-  main .table-footer .download button {
+  .AdminPubPage .table-footer .download button {
     padding: 10px;
     border-radius: 3px;
     border: none;
@@ -467,12 +476,12 @@ main .header {
     cursor: pointer;
   }
   
-  main .table-footer .download button:hover {
+  .AdminPubPage .table-footer .download button:hover {
     opacity: 80%;
   }
   
   /*style for download modal */
-  .modal {
+  .AdminPubPage .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1003; /* Sit on top */
@@ -485,7 +494,7 @@ main .header {
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   }
   /*style for download modal */
-  .modal-content1 {
+  .AdminPubPage .modal-content1 {
     background-color: #fff;
     margin: 5% auto;
     /* margin-left: 30%; */
@@ -498,12 +507,12 @@ main .header {
     position: relative;
     opacity: 2;
   }
-  .modal-content1 iframe {
+  .AdminPubPage .modal-content1 iframe {
     width: 100%;
     height: calc(100% - 5px); /* Subtract height of close button */
     /* border: 2px solid black; */
   }
-  .close {
+  .AdminPubPage .close {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -516,7 +525,7 @@ main .header {
     font-size: 28px;
   }
   
-  #loading-screen {
+  .AdminPubPage #loading-screen {
     position: fixed;
     top: 0;
     left: 0;
@@ -529,7 +538,7 @@ main .header {
     z-index: 9999;
   }
   
-  .loading-img img {
+  .AdminPubPage .loading-img img {
     animation: load 2s ease-in-out infinite;
     width: 130px;
   }
