@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import { AdminNavbar } from "../../../components";
 import "./adminpublications.css";
+import "./checklist.css";
 import Pagination from "../Pagination";
+import { FaSortDown } from "react-icons/fa";
+import Checklist from "./Checklist";
+// import { Dropdown } from "rsuite";
 
 function AdminPublications() {
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleClick = () => {
+    setIsRotated(!isRotated);
+  };
   return (
     <div className="AdminPubPage">
       {/*?php
@@ -35,7 +44,7 @@ function AdminPublications() {
           >
             {/*?=$_SESSION['user_name']?*/}
           </p>
-          <small className="margin-right: 50px;">Admin</small>
+          <small style={{ marginRight: "50px", color: "white" }}>Admin</small>
         </div>
       </nav>
 
@@ -48,147 +57,33 @@ function AdminPublications() {
             <h1 className="title">Publications</h1>
             <div className="left">
               <div className="btn-container">
-                <button
+                {/* <button
                   className="select-columns-btn"
-                  onClick="rotateButton()"
+                  onClick={toggleRotation}
                   id="button-icon"
                   title="Edit Table Column"
                 >
-                  {/* <i className="fa-solid fa-caret-down" /> */}
+                  <FaSortDown />
+                </button> */}
+                <button onClick={handleClick} className="select-columns-btn">
+                  <FaSortDown
+                    style={{
+                      transform: isRotated ? "rotate(180deg)" : "rotate(0deg)",
+                      transition: "transform 0.3s ease",
+                    }}
+                  />
                 </button>
-                <div className="checkbox-container" id="checkbox-container">
-                  <input
-                    type="checkbox"
-                    name="col-title"
-                    id="col-title"
-                    defaultChecked
-                  />
-                  <label className="checkbox-button" htmlFor="col-title">
-                    Title
-                  </label>
-                  <br />
-                  <input type="checkbox" name="col-type" id="col-type" />
-                  <label className="checkbox-button" htmlFor="col-type">
-                    Type
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-publisher"
-                    id="col-publisher"
-                  />
-                  <label className="checkbox-button" htmlFor="col-publisher">
-                    Publisher
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-research-area"
-                    id="col-research-area"
-                  />
-                  <label
-                    className="checkbox-button"
-                    htmlFor="col-research-area"
-                  >
-                    Research Area
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-college"
-                    id="col-college"
-                    defaultChecked
-                  />
-                  <label className="checkbox-button" htmlFor="col-college">
-                    College
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-quartile"
-                    id="col-quartile"
-                  />
-                  <label className="checkbox-button" htmlFor="col-quartile">
-                    Quartile
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-campus"
-                    id="col-campus"
-                    defaultChecked
-                  />
-                  <label className="checkbox-button" htmlFor="col-campus">
-                    Campus
-                  </label>
-                  <br />
-                  <input type="checkbox" name="col-sdg" id="col-sdg" />
-                  <label className="checkbox-button" htmlFor="col-sdg">
-                    SDG
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-date-published"
-                    id="col-date-published"
-                    defaultChecked
-                  />
-                  <label
-                    className="checkbox-button"
-                    htmlFor="col-date-published"
-                  >
-                    Date Published
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-authors"
-                    id="col-authors"
-                    defaultChecked
-                  />
-                  <label className="checkbox-button" htmlFor="col-authors">
-                    Authors
-                  </label>
-                  <br />
-                  <input type="checkbox" name="col-funding" id="col-funding" />
-                  <label className="checkbox-button" htmlFor="col-funding">
-                    Funding
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-fund-type"
-                    id="col-fund-type"
-                  />
-                  <label className="checkbox-button" htmlFor="col-fund-type">
-                    Fund Type
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-fund-agency"
-                    id="col-fund-agency"
-                  />
-                  <label className="checkbox-button" htmlFor="col-fund-agency">
-                    Fund Agency
-                  </label>
-                  <br />
-                  <input
-                    type="checkbox"
-                    name="col-citations"
-                    id="col-citations"
-                    defaultChecked
-                  />
-                  <label className="checkbox-button" htmlFor="col-citations">
-                    Citations
-                  </label>
-                </div>
+                {isRotated && (
+                  <div className="dropdown-content">
+                    <Checklist />
+                  </div>
+                )}
               </div>
 
               <form action method="get">
                 <div className="form-group">
                   {/* <input type="text" name="search" defaultValue="<?php echo isset($_GET[" search']) ? $_get['search'] : '' />' placeholder="Search..."&gt; */}
-                  {/* <input type="text" name="search" />' placeholder="Search..."&gt; */}
+                  <input type="text" name="search" input="Search" />
                   <i className="bx bx-search icon" />
                 </div>
               </form>
@@ -362,7 +257,6 @@ function AdminPublications() {
                       {/*?= $row['number_of_citation'] != null ? $row['number_of_citation'] : "N/A"; ?*/}
                     </td>
                     <td className="pb-action-btns stickey-col">
-
                       {/*?php
                       // Check if the $google_link is empty which is prioritized by the redirect button $google_link 
                       = $row['google_scholar_details']; if (empty ($google_link)) { // If the $google_link is empty,
@@ -417,7 +311,7 @@ function AdminPublications() {
             {/*?php
           include_once 'functionalities/publications_include/pagination.php';
           ?*/}
-          <Pagination />
+            <Pagination />
           </section>
         </main>
 

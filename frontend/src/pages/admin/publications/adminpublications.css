@@ -315,7 +315,12 @@
     justify-content: center;
     align-items: center;
   }
-  
+
+  .AdminPubPage .rotate {
+    transition: transform 0.3s ease; /* You can adjust the duration and easing here */
+    transform: rotate(180deg);
+  }
+
   .AdminPubPage table .edit-btn,
   .AdminPubPage .delete-btn,
   .AdminPubPage .gdrive-btn {
@@ -408,6 +413,10 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
   .AdminPubPage .checkbox-button {
     width: 10.8%;
