@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   About,
@@ -14,7 +13,7 @@ import AdminPublications from "./pages/admin/publications/AdminPublications";
 import AdminIPassets from "./pages/admin/ipassets/AdminIPassets";
 import AdminAuthors from "./pages/admin/authors/AdminAuthors";
 import UserAccounts from "./pages/admin/useraccounts/UserAccounts";
-import Logs from "./pages/admin/logs/Logs";
+// import Logs from "./pages/admin/logs/Logs";
 
 function App() {
   return (
@@ -23,8 +22,8 @@ function App() {
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/ip-assets" element={<IPassets />} />
+          <Route path="/publications/:title?" element={<Publications />} />
+          <Route path="/ip-assets/:title?" element={<IPassets />} />
           <Route path="/profile" element={<UserProfile />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/about" element={<About />} />
@@ -35,7 +34,7 @@ function App() {
           <Route path="/admin/ipassets" element={<AdminIPassets />} />
           <Route path="/admin/authors" element={<AdminAuthors />} />
           <Route path="/admin/useraccounts" element={<UserAccounts />} />
-          <Route path="/admin/logs" element={<Logs />} />
+          {/* <Route path="/admin/logs" element={<Logs />} /> */}
         </Routes>
       </Router>
     </>

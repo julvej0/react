@@ -2,7 +2,7 @@ import React from 'react'
 import "./documentDisplay.css"
 import Navbar from '../navbar/Navbar'
 
-const DocumentDisplay = ({title, }) => {
+const DocumentDisplay = ({title, params}) => {
   return (
     <div className='DocuDisplayPage'>
       <Navbar/>
@@ -25,7 +25,7 @@ const DocumentDisplay = ({title, }) => {
                   type="text"
                   name="search-table"
                   placeholder="Search Article or Author"
-                  defaultValue="<?=isset($_GET['search-table']) ?  $_GET['search-table'] : ''?>"
+                  defaultValue={params ? params : ""}
                 />
                 <i className="bx bx-search icon" />
               </div>

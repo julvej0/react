@@ -3,6 +3,7 @@ import "./signup.css"
 import background from "../../assets/images/background_img.jpg"
 import bsulogo from "../../assets/images/batStateUNeu-logo.png"
 import { FaEyeSlash, FaEye  } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -126,9 +127,11 @@ const SignUp = () => {
             <br />
             <label id="labelSignUp">
               Already have an account?
-              <a id="a_SignUp" href="">
-                &nbsp;Sign In
-              </a>
+              <Link to="/login">
+                <a id="a_SignUp" href="">
+                  &nbsp;Sign In
+                </a>
+              </Link>
             </label>
             <br />
           </form>

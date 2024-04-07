@@ -5,6 +5,7 @@ import background from "../../assets/images/background_img.jpg";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   // ush for shortcut
@@ -15,6 +16,7 @@ const Login = () => {
   const [type1, setType1] = useState("password");
   const [type2, setType2] = useState("password");
   const [displayModal, setDisplayModal] = useState(false);
+  const navigate = useNavigate()
   
   const openModal = () => {
     setDisplayModal(true);
@@ -49,6 +51,10 @@ const Login = () => {
     }
   }
 
+  function handleSubmit(e){
+   e.preventDefault()
+   navigate("/admin/dashboard") 
+  }
   return (
     <div className="LoginPage">
       <div id="whole_page">
@@ -272,7 +278,7 @@ const Login = () => {
               name="confirm"
               type="button"
               id="submit-password"
-              onclick="submitPss()"
+              onClick={handleSubmit}
             >
               Submit
             </button>

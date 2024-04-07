@@ -1,5 +1,5 @@
 import React from 'react'
-import "./useraccounts.css";
+// import "./useraccounts.css";
 
 function UserAccounts() {
   return (
